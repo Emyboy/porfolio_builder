@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { JumbotronType } from './Jombotron.type';
 
+interface Props {
+    widget_data: JumbotronType;
+}
 
-export const JumbotronWidget:React.FC<JumbotronType> = () => {
+export const JumbotronWidget:React.FC<Props> = () => {
     return (
         <div className="jumbotron">
             <h1>Bottom Navbar example</h1>

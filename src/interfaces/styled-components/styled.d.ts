@@ -5,13 +5,10 @@ type CommonColors = "transparent" | "darkGrey" | "blackGrey" | "white";
 
 type ExtendedColors =
     | CommonColors
-    | "toggleBorder"
-    | "gradient"
+    | "accent_color"
     | "background"
-    | "headerBg"
-    | "cardsBg"
-    | "textColor"
-    | "dodgerBlue";
+    | "theme_color"
+    | "text_color"
 declare module "styled-components" {
     export interface BaseTheme {
         colors: Record<CommonColors, string>;
