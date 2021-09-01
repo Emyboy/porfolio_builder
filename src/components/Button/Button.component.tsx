@@ -1,17 +1,14 @@
 import React from "react";
-import { Button as Btn } from 'antd';
+import { Button as Btn } from "antd";
+import { ButtonProps } from "antd/lib/button";
 
-interface Button {
-    onClick: () => void;
-    disabled?: boolean;
-    className?: string;
-}
+type Props = ButtonProps;
 
-export const Button: React.FC<Button> = ({
-    onClick,
+export const Button: React.FC<Props> = ({
+    children,
     disabled,
     className,
-    children
+    onClick,
 }) => {
     return (
         <Btn onClick={onClick} disabled={disabled} className={className}>
