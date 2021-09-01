@@ -1,6 +1,7 @@
 # Portfolio Builder
+This is an app that allows users to build out their resumes, portfolio and in the future a website of their own.
 ## Getting Started
-
+### you'll need to clone the project
 
 ## Available Scripts
 
@@ -21,7 +22,8 @@
 ```bash
     yarn start
 ```
-
+## Collaboration Guidelines
+... Coming soon
 ## Learn More
 
 To learn more about **superplate**, please check out the [Documentation](https://github.com/pankod/superplate).
