@@ -1,6 +1,7 @@
+import { Button } from "@components";
 import React from "react";
 
-import { Header, Main, Cards, Footer } from "@components";
+// import {  } from "@components";
 
 const Home: React.FC = () => {
     return (
@@ -11,10 +12,9 @@ const Home: React.FC = () => {
                 minHeight: "100vh",
             }}
         >
-            <Header />
-            <Main />
-            <Cards />
-            <Footer />
+           <Button onClick={() => {}}>
+               {"Click Me"}
+           </Button>
         </div>
     );
 };
