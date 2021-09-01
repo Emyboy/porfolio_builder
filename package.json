@@ -12,7 +12,7 @@
         "test": "jest -c test/jest.config.js",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run --config video=false",
-        "cypress:test": "start-server-and-test start http://localhost:3000 cypress:run"
+        "cypress:test": "start-server-and-test start http://localhost:yarn cypress:run"
     },
     "dependencies": {
         "@ant-design/icons": "^4.4.0",
@@ -25,6 +25,8 @@
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "react-redux": "^7.2.4",
+        "redux-devtools-extension": "^2.13.9",
+        "redux-logger": "^3.0.6",
         "styled-components": "^5.2.1",
         "styled-system": "^5.1.5"
     },

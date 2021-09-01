@@ -1,0 +1,1 @@
+export { JumbotronWidget } from './jumbotron/Jumbotron.widget'
