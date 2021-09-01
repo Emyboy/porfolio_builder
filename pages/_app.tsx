@@ -1,5 +1,6 @@
 import React from "react";
 import { AppProps } from "next/app";
+import "@styles/bootstrap.css";
 import "antd/dist/antd.css";
 import { StyledThemeProvider } from "@definitions/styled-components";
 import { Provider } from "react-redux";
