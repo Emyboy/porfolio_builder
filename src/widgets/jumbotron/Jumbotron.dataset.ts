@@ -8,8 +8,8 @@ export default {
     },
     body_style: {
         display: "flex",
-        // flexDirection: "row",
-        // justifyContent: "center",
+        flexDirection: "row",
+        justifyContent: "center",
     },
     display_name: "Default Jumbotron",
     description: "This is used for display stuff at the top, like in into",
@@ -23,5 +23,9 @@ export default {
     avatar_url: null,
     avatar_style: {
         borderRadius: "10px",
+    },
+    avatar_container_style: {
+        borderRadius: "10px",
+        justifyContent: "center",
     },
 };

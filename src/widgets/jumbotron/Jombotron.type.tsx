@@ -15,4 +15,5 @@ export interface JumbotronType {
   avatar_style: React.CSSProperties | null;
   body_style: React.CSSProperties | null;
   description: string;
+  avatar_container_style: React.CSSProperties | null;
 }

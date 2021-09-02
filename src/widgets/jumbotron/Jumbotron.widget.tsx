@@ -116,14 +116,10 @@ export function JumbotronWidget(props: Props): ReactElement {
                     <div className="container">
                         <div className="row g-xl-5">
                             {widget_data.has_avatar ? (
-                                <div className="col-md-4 d-flex align-items-center aos-init aos-animate">
+                                <div className="col-md-4 d-flex align-items-center aos-init aos-animate" style={{...widget_data.avatar_container_style}}>
                                     <img
                                         className="shadow"
-                                        style={
-                                            widget_data.avatar_style
-                                                ? widget_data.avatar_style
-                                                : {}
-                                        }
+                                        style={{...widget_data.avatar_style}}
                                         src={
                                             avatarFile
                                                 ? URL.createObjectURL(
