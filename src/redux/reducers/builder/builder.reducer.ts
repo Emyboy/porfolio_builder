@@ -13,10 +13,8 @@ const initialState: BuilderStateTypes = {
   theme_color: '',
   index: 1,
   widget_list: [
-    // dummy_jumbotron_data,
-    // CartWithImageDummy,
     dummy_jumbotron_data,
-    // CartWithImageDummy,
+    dummy_jumbotron_data,
   ],
 };
 

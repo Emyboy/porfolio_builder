@@ -2,13 +2,12 @@ import React, { ReactElement, useState, useEffect } from "react";
 import InputField from "@components/Toolbar/EachTool/InputField/InputField.tool";
 import { JumbotronType } from "@widgets/jumbotron/Jombotron.type";
 import WidgetWrapper from "@components/WidgetWrapper/WidgetWrapper";
-// import { withToolkit } from "../src/components/withToolkit/withToolkit";
 import { useDispatch } from "react-redux";
 import { updateWidgetData } from "@redux/actions/builder/builder.action";
 import ImageSelectorTool from "@components/Toolbar/EachTool/imageSelector/ImageSelector.tool";
 import EachToolWrapperTool from "@components/Toolbar/EachTool/EachToolWrapper/EachToolWrapper.tool";
 import Global from "../../../Global";
-import { Slider, Switch } from "antd";
+import { Slider } from "@components/Toolbar/EachTool/Slider/Slider";
 
 interface Props {
     widget_data: JumbotronType;
@@ -72,20 +71,22 @@ export function JumbotronWidget(props: Props): ReactElement {
                     >
                         <>
                             <ImageSelectorTool
+                                divided
                                 setImageFile={(file) => setAvatarFile(file[0])}
                                 disabled={!widget_data.has_avatar}
+                                selectedImageFile={avatarFile}
                             />
-                            <label>Image Roundness</label>
                             <Slider
-                                defaultValue={parseInt(
-                                    `${widget_data.avatar_style?.borderRadius}`,
-                                )}
-                                disabled={!widget_data.has_avatar}
-                                min={0}
-                                max={50}
+                                widget_data={widget_data}
                                 onChange={(e) =>
                                     updateAvatarStyles("borderRadius", `${e}%`)
                                 }
+                                min={0}
+                                max={50}
+                                label="Image Roundness"
+                                defaultValue={parseInt(
+                                    `${widget_data.avatar_style?.borderRadius}`,
+                                )}
                             />
                         </>
                     </EachToolWrapperTool>
@@ -100,12 +101,17 @@ export function JumbotronWidget(props: Props): ReactElement {
                         disabled={!widget_data.has_avatar}
                     >
                         <>
-                            <label>Heading Color</label><br />
-                            <input type='color'/><br />
-                            <label>Sub Heading Color</label><br />
-                            <input type='color'/><br />
-                            <label>Background Color</label><br />
-                            <input type='color'/>
+                            <label>Heading Color</label>
+                            <br />
+                            <input type="color" />
+                            <br />
+                            <label>Sub Heading Color</label>
+                            <br />
+                            <input type="color" />
+                            <br />
+                            <label>Background Color</label>
+                            <br />
+                            <input type="color" />
                         </>
                     </EachToolWrapperTool>
                 </div>
@@ -116,10 +122,15 @@ export function JumbotronWidget(props: Props): ReactElement {
                     <div className="container">
                         <div className="row g-xl-5">
                             {widget_data.has_avatar ? (
-                                <div className="col-md-4 d-flex align-items-center aos-init aos-animate" style={{...widget_data.avatar_container_style}}>
+                                <div
+                                    className="col-md-4 d-flex align-items-center aos-init aos-animate"
+                                    style={{
+                                        ...widget_data.avatar_container_style,
+                                    }}
+                                >
                                     <img
                                         className="shadow"
-                                        style={{...widget_data.avatar_style}}
+                                        style={{ ...widget_data.avatar_style }}
                                         src={
                                             avatarFile
                                                 ? URL.createObjectURL(

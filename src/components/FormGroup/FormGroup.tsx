@@ -1,22 +1,30 @@
 import React, { ReactElement } from "react";
 
 interface Props {
-  children: ReactElement | ReactElement[];
-  label?: string;
-  htmlFor?: string;
+    children: ReactElement | ReactElement[];
+    label?: string;
+    htmlFor?: string;
+    labelClassName?: string;
+    divided?: boolean;
 }
 
 export default function FormGroup({
-  children,
-  htmlFor,
-  label,
+    children,
+    htmlFor,
+    label,
+    labelClassName,
+    divided,
 }: Props): ReactElement {
-  return (
-      <div className="form-group mt-3">
-          <label className="mb-1" htmlFor={htmlFor}>
-              <b>{label}</b>
-          </label>
-          {children}
-      </div>
-  );
+    return (
+        <div className="form-group mt-3">
+            <label
+                className={`mb-1 ${labelClassName ? labelClassName : null}`}
+                htmlFor={htmlFor}
+            >
+                <b>{label}</b>
+            </label><br />
+            {children}
+            {divided ? <hr /> : null}
+        </div>
+    );
 }

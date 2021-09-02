@@ -25,7 +25,7 @@ const ToolbarWrapper = styled.aside`
     }
     .right-panel {
         background-color: ${(p) => p.theme.colors.accent_color};
-        border-radius: 20px;
+        border-radius: 10px;
         overflow-y: scroll;
         padding: 10px;
     }
