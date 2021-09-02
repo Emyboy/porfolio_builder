@@ -12,11 +12,11 @@ export default function FormGroup({
   label,
 }: Props): ReactElement {
   return (
-    <div className="form-group">
-      <label className="text-muted" htmlFor={htmlFor}>
-        {label}
-      </label>
-      {children}
-    </div>
+      <div className="form-group mt-3">
+          <label className="mb-1" htmlFor={htmlFor}>
+              <b>{label}</b>
+          </label>
+          {children}
+      </div>
   );
 }

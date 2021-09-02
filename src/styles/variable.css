@@ -1,7 +1,8 @@
 :root {
   --bg_color: #252735;
   --fg_color: #2A3142;
-  --accent_color: #6894BE;
+  --accent_color: #2A3142;
+  --text_color: #6894BE;
   --theme_color: #02A499;
 }
 .text-theme {

@@ -14,11 +14,6 @@ export const S_Builder = styled.div`
             top: -1px;
         }
     }
-    .right-panel {
-        background-color: ${(p) => p.theme.colors.accent_color};
-        border-radius: 20px;
-        overflow-y: scroll;
-    }
     .builder-body {
         background-color: white;
         border-radius: 10px;

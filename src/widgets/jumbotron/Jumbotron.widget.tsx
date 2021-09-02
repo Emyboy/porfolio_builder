@@ -61,6 +61,7 @@ export function JumbotronWidget(props: Props): ReactElement {
                         defaultValue={widget_data.sub_heading}
                     />
                     <EachToolWrapperTool
+                        sectionName="Avatar Image"
                         setDisabled={() =>
                             handleWidgetUpdate(
                                 !widget_data.has_avatar,
@@ -86,6 +87,25 @@ export function JumbotronWidget(props: Props): ReactElement {
                                     updateAvatarStyles("borderRadius", `${e}%`)
                                 }
                             />
+                        </>
+                    </EachToolWrapperTool>
+                    <EachToolWrapperTool
+                        sectionName="Colors"
+                        setDisabled={() =>
+                            handleWidgetUpdate(
+                                !widget_data.has_avatar,
+                                "has_avatar",
+                            )
+                        }
+                        disabled={!widget_data.has_avatar}
+                    >
+                        <>
+                            <label>Heading Color</label><br />
+                            <input type='color'/><br />
+                            <label>Sub Heading Color</label><br />
+                            <input type='color'/><br />
+                            <label>Background Color</label><br />
+                            <input type='color'/>
                         </>
                     </EachToolWrapperTool>
                 </div>
