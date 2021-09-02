@@ -43,7 +43,7 @@ export const WidgetSideNav = styled.aside<SideNavProps>`
     /* padding: 20px; */
     height: 100vh;
     width: 40em;
-    background-color: ${p => p.theme.colors.theme_color};
+    background-color: ${p => p.theme.colors.accent_color};
     z-index: 70;
     top: 0;
     left: ${(p) => (!p.show ? "-50em" : "0")};

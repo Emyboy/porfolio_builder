@@ -1,6 +1,4 @@
-// import dummy_jumbotron_data, {
-//   CartWithImageDummy,
-// } from "../../../../dummy_data/dummy_jumbotron_data";
+import dummy_jumbotron_data from "@widgets/jumbotron/Jumbotron.dataset";
 import {
   SET_BUILDER_STATE,
   UPDATE_WIDGET_DATA,
@@ -17,7 +15,7 @@ const initialState: BuilderStateTypes = {
   widget_list: [
     // dummy_jumbotron_data,
     // CartWithImageDummy,
-    // dummy_jumbotron_data,
+    dummy_jumbotron_data,
     // CartWithImageDummy,
   ],
 };

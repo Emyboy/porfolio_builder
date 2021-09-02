@@ -1,0 +1,10 @@
+@import url(./variable.css);
+.ant-slider-handle {
+    margin-top: -2px;
+}
+.ant-switch {
+    background-color: var(--accent_color);
+}
+.ant-slider-track {
+    background-color: var(--accent_color);
+}

@@ -1,6 +1,7 @@
 import { Button } from '@components/Button/Button.component';
 import React from 'react';
 import { S_Builder } from './Builder.styled';
+import BuilderPreview from './BuilderPreview';
 
 
 export const BuilderComponent:React.FC = () => {
@@ -15,8 +16,7 @@ export const BuilderComponent:React.FC = () => {
                 </nav>
             </div>
             <div className="container-fluid pt-4" style={{ height: "98vh" }}>
-                {/* <BuilderPreview /> */}
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi odit perspiciatis obcaecati ipsa cumque? Veniam quaerat recusandae dolore error velit natus asperiores provident alias ipsa, aspernatur ipsum cum tenetur voluptas!</h2>
+                <BuilderPreview />
             </div>
         </S_Builder>
     );

@@ -17,8 +17,8 @@ export default function BuilderPreview({}: Props): ReactElement {
       <div
         className="card text-white m-1"
         style={{
-          height: "200px",
-          width: "270px",
+          height: "160px",
+          width: "240px",
           backgroundImage: "url(https://picsum.photos/300/300)",
         }}
       >
