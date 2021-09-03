@@ -8,18 +8,20 @@ import ImageSelectorTool from "@components/Toolbar/EachTool/imageSelector/ImageS
 import EachToolWrapperTool from "@components/Toolbar/EachTool/EachToolWrapper/EachToolWrapper.tool";
 import Global from "../../../Global";
 import { Slider } from "@components/Toolbar/EachTool/Slider/Slider";
+import { ColorPicker } from "@components/Toolbar/EachTool/ColorPicker/ColorPicker.tool";
+import {withToolKit} from "@components/HOCs/withToolKit";
 
 interface Props {
     widget_data: JumbotronType;
 }
 
-export function JumbotronWidget(props: Props): ReactElement {
+export const JumbotronWidget = (props: Props): ReactElement => {
     const [addAvatar, setAddAvatar] = useState<boolean>(false);
     const [avatarFile, setAvatarFile] = useState(null);
     const { widget_data } = props;
     const data = widget_data;
     const dispatch = useDispatch();
-    const handleWidgetUpdate = (value: any, key: string) => {
+    const updateKeyValues = (value: any, key: string) => {
         const editedData = {
             ...data,
             [key]: value,
@@ -27,17 +29,16 @@ export function JumbotronWidget(props: Props): ReactElement {
         dispatch(updateWidgetData(editedData));
     };
 
-    const updateAvatarStyles = (key: string, value: string) => {
+    const updateNestedkeyValues = (key: string, value: string, parentKey: string ) => {
         const editedData = {
             ...data,
-            avatar_style: {
-                ...data.avatar_style,
+            [parentKey]: {
+                ...data[parentKey],
                 [key]: value,
             },
         };
         dispatch(updateWidgetData(editedData));
     };
-
     return (
         <WidgetWrapper
             index={widget_data.index}
@@ -47,14 +48,14 @@ export function JumbotronWidget(props: Props): ReactElement {
                     <p className="text-accent">{widget_data.description}</p> */}
                     <InputField
                         onChange={(e) =>
-                            handleWidgetUpdate(e.target.value, "heading")
+                            updateKeyValues(e.target.value, "heading")
                         }
                         label="Heading Text"
                         defaultValue={widget_data.heading}
                     />
                     <InputField
                         onChange={(e) =>
-                            handleWidgetUpdate(e.target.value, "sub_heading")
+                            updateKeyValues(e.target.value, "sub_heading")
                         }
                         label="Sub Heading Text"
                         defaultValue={widget_data.sub_heading}
@@ -62,7 +63,7 @@ export function JumbotronWidget(props: Props): ReactElement {
                     <EachToolWrapperTool
                         sectionName="Avatar Image"
                         setDisabled={() =>
-                            handleWidgetUpdate(
+                            updateKeyValues(
                                 !widget_data.has_avatar,
                                 "has_avatar",
                             )
@@ -79,7 +80,7 @@ export function JumbotronWidget(props: Props): ReactElement {
                             <Slider
                                 widget_data={widget_data}
                                 onChange={(e) =>
-                                    updateAvatarStyles("borderRadius", `${e}%`)
+                                    updateNestedkeyValues("borderRadius", `${e}%`, 'avatar_style')
                                 }
                                 min={0}
                                 max={50}
@@ -93,31 +94,21 @@ export function JumbotronWidget(props: Props): ReactElement {
                     <EachToolWrapperTool
                         sectionName="Colors"
                         setDisabled={() =>
-                            handleWidgetUpdate(
+                            updateKeyValues(
                                 !widget_data.has_avatar,
                                 "has_avatar",
                             )
                         }
                         disabled={!widget_data.has_avatar}
                     >
-                        <>
-                            <label>Heading Color</label>
-                            <br />
-                            <input type="color" />
-                            <br />
-                            <label>Sub Heading Color</label>
-                            <br />
-                            <input type="color" />
-                            <br />
-                            <label>Background Color</label>
-                            <br />
-                            <input type="color" />
-                        </>
+                        <ColorPicker label="Heading Color" onColorChange={e => updateNestedkeyValues('color',e.target.value, 'heading_style')} defaultValue={widget_data.heading_style?.color} />
+                        <ColorPicker label="Sub Heading Color" onColorChange={e => updateNestedkeyValues('color',e.target.value, 'sub_heading_style')} defaultValue={widget_data.sub_heading_style?.color} />
+                        <ColorPicker label="Background" onColorChange={e => updateNestedkeyValues('backgroundColor',e.target.value, 'container_style')} defaultValue={widget_data.container_style?.backgroundColor} />
                     </EachToolWrapperTool>
                 </div>
             }
         >
-            <div className="jumbotron p-4">
+            <div className="jumbotron p-4" style={{...widget_data.container_style}}>
                 <div className="">
                     <div className="container">
                         <div className="row g-xl-5">
@@ -144,8 +135,8 @@ export function JumbotronWidget(props: Props): ReactElement {
                                 </div>
                             ) : null}
                             <div className="col-lg-8 col-sm-12">
-                                <h1>{widget_data.heading}</h1>
-                                <p className="fs-4">
+                                <h1 style={{...widget_data.heading_style}}>{widget_data.heading}</h1>
+                                <p className="fs-4" style={{...widget_data.sub_heading_style}}>
                                     {widget_data.sub_heading}
                                 </p>
                             </div>
@@ -155,6 +146,5 @@ export function JumbotronWidget(props: Props): ReactElement {
             </div>
         </WidgetWrapper>
     );
-}
+};
 
-// export default withToolkit(JumbotronWidget);
