@@ -7,8 +7,8 @@ const { Panel } = Collapse;
 
 interface Props {
     children: ReactElement[] | ReactElement | null;
-    setDisabled: Function;
-    disabled: boolean;
+    setDisabled: (disabled: boolean) => void;
+    disabled?: boolean;
     sectionName?: string;
     withoutDisability?: boolean;
 }

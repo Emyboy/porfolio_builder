@@ -9,7 +9,9 @@ import EachToolWrapperTool from "@components/Toolbar/EachTool/EachToolWrapper/Ea
 import Global from "../../../Global";
 import { Slider } from "@components/Toolbar/EachTool/Slider/Slider";
 import { ColorPicker } from "@components/Toolbar/EachTool/ColorPicker/ColorPicker.tool";
-import {withToolKit} from "@components/HOCs/withToolKit";
+import { withToolKit } from "@components/HOCs/withToolKit";
+import { AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
+import { IconBaseProps, IconType } from "react-icons/lib";
 
 interface Props {
     widget_data: JumbotronType;
@@ -29,7 +31,11 @@ export const JumbotronWidget = (props: Props): ReactElement => {
         dispatch(updateWidgetData(editedData));
     };
 
-    const updateNestedkeyValues = (key: string, value: string, parentKey: string ) => {
+    const updateNestedkeyValues = (
+        key: string,
+        value: string,
+        parentKey: string,
+    ) => {
         const editedData = {
             ...data,
             [parentKey]: {
@@ -80,7 +86,11 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                             <Slider
                                 widget_data={widget_data}
                                 onChange={(e) =>
-                                    updateNestedkeyValues("borderRadius", `${e}%`, 'avatar_style')
+                                    updateNestedkeyValues(
+                                        "borderRadius",
+                                        `${e}%`,
+                                        "avatar_style",
+                                    )
                                 }
                                 min={0}
                                 max={50}
@@ -93,22 +103,94 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                     </EachToolWrapperTool>
                     <EachToolWrapperTool
                         sectionName="Colors"
-                        setDisabled={() =>
-                            updateKeyValues(
-                                !widget_data.has_avatar,
-                                "has_avatar",
-                            )
-                        }
+                        withoutDisability
+                        setDisabled={() => {}}
                         disabled={!widget_data.has_avatar}
                     >
-                        <ColorPicker label="Heading Color" onColorChange={e => updateNestedkeyValues('color',e.target.value, 'heading_style')} defaultValue={widget_data.heading_style?.color} />
-                        <ColorPicker label="Sub Heading Color" onColorChange={e => updateNestedkeyValues('color',e.target.value, 'sub_heading_style')} defaultValue={widget_data.sub_heading_style?.color} />
-                        <ColorPicker label="Background" onColorChange={e => updateNestedkeyValues('backgroundColor',e.target.value, 'container_style')} defaultValue={widget_data.container_style?.backgroundColor} />
+                        <ColorPicker
+                            label="Heading Color"
+                            onColorChange={(e) =>
+                                updateNestedkeyValues(
+                                    "color",
+                                    e.target.value,
+                                    "heading_style",
+                                )
+                            }
+                            defaultValue={widget_data.heading_style?.color}
+                        />
+                        <ColorPicker
+                            label="Sub Heading Color"
+                            onColorChange={(e) =>
+                                updateNestedkeyValues(
+                                    "color",
+                                    e.target.value,
+                                    "sub_heading_style",
+                                )
+                            }
+                            defaultValue={widget_data.sub_heading_style?.color}
+                        />
+                        <ColorPicker
+                            label="Background"
+                            onColorChange={(e) =>
+                                updateNestedkeyValues(
+                                    "backgroundColor",
+                                    e.target.value,
+                                    "container_style",
+                                )
+                            }
+                            defaultValue={
+                                widget_data.container_style?.backgroundColor
+                            }
+                        />
+                    </EachToolWrapperTool>
+                    <EachToolWrapperTool
+                        sectionName="Layout"
+                        withoutDisability
+                        setDisabled={() => {}}
+                    >
+                        <Slider
+                            widget_data={widget_data}
+                            onChange={(e) =>
+                                updateNestedkeyValues(
+                                    "height",
+                                    `${e}vh`,
+                                    "container_style",
+                                )
+                            }
+                            defaultValue={parseInt(
+                                `${widget_data.container_style?.height}`,
+                            )}
+                            min={35}
+                            max={90}
+                            label="Height"
+                        />
+                    </EachToolWrapperTool>
+
+                    <EachToolWrapperTool
+                        sectionName="Socials"
+                        withoutDisability
+                        setDisabled={() => {}}
+                    >
+                        <InputField
+                            label="Twitter"
+                            onChange={(e) =>
+                                updateKeyValues(e.target.value, "twitter")
+                            }
+                        />
+                        <InputField
+                            label="LinkedIn"
+                            onChange={(e) =>
+                                updateKeyValues(e.target.value, "linkedin")
+                            }
+                        />
                     </EachToolWrapperTool>
                 </div>
             }
         >
-            <div className="jumbotron p-4" style={{...widget_data.container_style}}>
+            <div
+                className="jumbotron p-4"
+                style={{ ...widget_data.container_style }}
+            >
                 <div className="">
                     <div className="container">
                         <div className="row g-xl-5">
@@ -129,16 +211,55 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                                                   )
                                                 : Global.user_placeholer_img
                                         }
-                                        width="250"
+                                        width="260"
                                         height="250"
                                     />
                                 </div>
                             ) : null}
                             <div className="col-lg-8 col-sm-12">
-                                <h1 style={{...widget_data.heading_style}}>{widget_data.heading}</h1>
-                                <p className="fs-4" style={{...widget_data.sub_heading_style}}>
+                                <h1 style={{ ...widget_data.heading_style }}>
+                                    {widget_data.heading}
+                                </h1>
+                                <p
+                                    className="fs-4"
+                                    style={{ ...widget_data.sub_heading_style }}
+                                >
                                     {widget_data.sub_heading}
                                 </p>
+                                <div>
+                                    {widget_data.twitter && (
+                                        <a
+                                            href={widget_data.twitter}
+                                            target="_blank"
+                                        >
+                                            <AiFillTwitterCircle
+                                                color={
+                                                    widget_data.heading_style
+                                                        ?.color
+                                                }
+                                                size={
+                                                    widget_data.social_icon_size
+                                                }
+                                            />
+                                        </a>
+                                    )}
+                                    {widget_data.linkedin && (
+                                        <a
+                                            href={widget_data.linkedin}
+                                            target="_blank"
+                                        >
+                                            <AiFillLinkedin
+                                                color={
+                                                    widget_data.heading_style
+                                                        ?.color
+                                                }
+                                                size={
+                                                    widget_data.social_icon_size
+                                                }
+                                            />
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -147,4 +268,3 @@ export const JumbotronWidget = (props: Props): ReactElement => {
         </WidgetWrapper>
     );
 };
-

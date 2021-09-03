@@ -16,11 +16,11 @@ export default function WidgetWrapper({
 }: Props): ReactElement {
     const app = useSelector((state: StoreState) => state.app);
     return (
-        <div>
+        <>
             {children}
             {app.toolsIndex === index ? (
                 <Toolbar index={index}>{toolkit}</Toolbar>
             ) : null}
-        </div>
+        </>
     );
 }

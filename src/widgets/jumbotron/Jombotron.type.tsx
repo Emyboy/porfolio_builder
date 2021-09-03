@@ -16,4 +16,12 @@ export interface JumbotronType {
   body_style: React.CSSProperties | null;
   description: string;
   avatar_container_style: React.CSSProperties | null;
+  linkedin?: string;
+  twitter?: string;
+  facebook?: string;
+  skype?: string;
+  github?: string;
+  dribble?: string;
+  instagram?: string;
+  social_icon_size?: number | string;
 }

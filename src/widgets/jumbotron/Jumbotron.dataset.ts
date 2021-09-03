@@ -3,8 +3,21 @@ export default {
     type: "jumbotron",
     css: "",
     markup: "",
+    linkedin: "",
+    twitter: "",
+    instagram: "",
+    facebook: "",
+    skype: "",
+    github: "",
+    dribble: "",
+    social_icon_size: 30,
     container_style: {
         backgroundColor: "#e8e8e8",
+        marginBottom: '50px',
+        height: '50vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     body_style: {
         display: "flex",
