@@ -15,8 +15,8 @@ export const BuilderComponent:React.FC = () => {
             <div className="fixed-top row justify-content-center">
                 <nav className="shadow">
                     <h4>Menu</h4>
-                    <Button onClick={() => {}}>
-                        {"Preview"}
+                    <Button outlined onClick={() => {}}>
+                        <span>Preview</span>
                     </Button>
                 </nav>
             </div>

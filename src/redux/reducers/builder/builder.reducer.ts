@@ -14,9 +14,9 @@ const initialState: BuilderStateTypes = {
   theme_color: '',
   index: 1,
   widget_list: [
-    dummy_jumbotron_data,
     // dummy_jumbotron_data,
-    HeadingDataset
+    // dummy_jumbotron_data,
+    // HeadingDataset
   ],
 };
 

@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import FormGroup from "@components/FormGroup/FormGroup";
+import styled from "styled-components";
 
 interface Props {
   label?: string;
@@ -11,6 +12,12 @@ interface Props {
   defaultValue?: string | number;
 }
 
+export const Input = styled.input`
+    &:focus {
+        box-shadow: 0px 0px 30px 1px ${p => p.theme.colors?.theme_color} !important;
+    }
+`;
+
 export default function InputField({
   label,
   htmlFor,
@@ -21,7 +28,7 @@ export default function InputField({
 }: Props): ReactElement {
   return (
     <FormGroup label={label} htmlFor={htmlFor}>
-      <input
+      <Input
         type={type}
         className="form-control"
         id={htmlFor}

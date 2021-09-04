@@ -196,6 +196,13 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                             }
                             defaultValue={widget_data.linkedin}
                         />
+                        <InputField
+                            label="Github"
+                            onChange={(e) =>
+                                updateKeyValues(e.target.value, "github")
+                            }
+                            defaultValue={widget_data.github}
+                        />
                     </EachToolWrapperTool>
                 </div>
             }
@@ -219,7 +226,11 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                             <img
                                 className="shadow"
                                 style={{ ...widget_data.avatar_style }}
-                                src={widget_data.avatar_url ? widget_data.avatar_url:Global.user_placeholer_img}
+                                src={
+                                    widget_data.avatar_url
+                                        ? widget_data.avatar_url
+                                        : Global.user_placeholer_img
+                                }
                                 width="260"
                                 height="250"
                             />
@@ -239,6 +250,14 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                             {widget_data.sub_heading}
                         </p>
                         <div>
+                            {widget_data.github && (
+                                <a href={widget_data.github} target="_blank">
+                                    <AiFillGithub
+                                        color={widget_data.heading_style?.color}
+                                        size={widget_data.social_icon_size}
+                                    />
+                                </a>
+                            )}
                             {widget_data.twitter && (
                                 <a href={widget_data.twitter} target="_blank">
                                     <AiFillTwitterCircle

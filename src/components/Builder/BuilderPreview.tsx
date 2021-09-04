@@ -54,8 +54,8 @@ export default function BuilderPreview({}: Props): ReactElement {
           </div>
 
           <div className="text-center border-top mb-2">
-            <Button className="mt-3" onClick={() => setShowNav(!showNav)}>
-              Add Widget
+            <Button rounded className="mt-3" onClick={() => setShowNav(!showNav)}>
+              <span>Add Widget</span>
             </Button>
           </div>
         </div>
