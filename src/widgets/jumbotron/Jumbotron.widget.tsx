@@ -9,16 +9,13 @@ import EachToolWrapperTool from "@components/Toolbar/EachTool/EachToolWrapper/Ea
 import Global from "../../../Global";
 import { Slider } from "@components/Toolbar/EachTool/Slider/Slider";
 import { ColorPicker } from "@components/Toolbar/EachTool/ColorPicker/ColorPicker.tool";
-import { withToolKit } from "@components/HOCs/withToolKit";
 import { AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
-import { IconBaseProps, IconType } from "react-icons/lib";
 
 interface Props {
     widget_data: JumbotronType;
 }
 
 export const JumbotronWidget = (props: Props): ReactElement => {
-    const [addAvatar, setAddAvatar] = useState<boolean>(false);
     const [avatarFile, setAvatarFile] = useState(null);
     const { widget_data } = props;
     const data = widget_data;
@@ -220,7 +217,7 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                                 </div>
                             ) : null}
                             <div className="col-lg-8 col-sm-12">
-                                <h1 style={{ ...widget_data.heading_style }}>
+                                <h1 style={{ ...widget_data.heading_style }} className='mt-3'>
                                     {widget_data.heading}
                                 </h1>
                                 <p

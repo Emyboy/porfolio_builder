@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">34.78% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/24</span>
+                <span class='fraction'>8/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/8</span>
+                <span class='fraction'>5/8</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">34.78% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/24</span>
+                <span class='fraction'>8/23</span>
             </div>
         
             
@@ -327,12 +327,7 @@
 <a name='L268'></a><a href='#L268'>268</a>
 <a name='L269'></a><a href='#L269'>269</a>
 <a name='L270'></a><a href='#L270'>270</a>
-<a name='L271'></a><a href='#L271'>271</a>
-<a name='L272'></a><a href='#L272'>272</a>
-<a name='L273'></a><a href='#L273'>273</a>
-<a name='L274'></a><a href='#L274'>274</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L271'></a><a href='#L271'>271</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -350,12 +345,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -363,7 +357,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -377,7 +371,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -614,16 +608,13 @@ import EachToolWrapperTool from "@components/Toolbar/EachTool/EachToolWrapper/Ea
 import Global from "../../../Global";
 import { Slider } from "@components/Toolbar/EachTool/Slider/Slider";
 import { ColorPicker } from "@components/Toolbar/EachTool/ColorPicker/ColorPicker.tool";
-import { withToolKit } from "@components/HOCs/withToolKit";
 import { AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
-import { IconBaseProps, IconType } from "react-icons/lib";
 &nbsp;
 interface Props {
     widget_data: JumbotronType;
 }
 &nbsp;
 export const JumbotronWidget = (props: Props): ReactElement =&gt; {
-    const [addAvatar, setAddAvatar] = useState&lt;boolean&gt;(false);
     const [avatarFile, setAvatarFile] = useState(null);
     const { widget_data } = props;
     const data = widget_data;
@@ -825,7 +816,7 @@ export const JumbotronWidget = (props: Props): ReactElement =&gt; {
                                 &lt;/div&gt;
                             ) : <span class="branch-1 cbranch-no" title="branch not covered" >null}</span>
                             &lt;div className="col-lg-8 col-sm-12"&gt;
-                                &lt;h1 style={{ ...widget_data.heading_style }}&gt;
+                                &lt;h1 style={{ ...widget_data.heading_style }} className='mt-3'&gt;
                                     {widget_data.heading}
                                 &lt;/h1&gt;
                                 &lt;p
@@ -836,7 +827,7 @@ export const JumbotronWidget = (props: Props): ReactElement =&gt; {
                                 &lt;/p&gt;
                                 &lt;div&gt;
                                     {widget_data.twitter &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >                                        &lt;a</span>
+                                        &lt;a
                                             href={widget_data.twitter}
                                             target="_blank"
                                         &gt;
@@ -883,7 +874,7 @@ export const JumbotronWidget = (props: Props): ReactElement =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Sep 04 2021 16:02:12 GMT+0100 (West Africa Standard Time)
+                at Sat Sep 04 2021 17:42:05 GMT+0100 (West Africa Standard Time)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>

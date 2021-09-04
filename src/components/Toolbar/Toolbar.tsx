@@ -17,7 +17,8 @@ const ToolbarWrapper = styled.aside`
     height: 90vh;
     color: ${(p) => p.theme.colors?.text_color};
     z-index: 50;
-    p, h3 {
+    p,
+    h3 {
         color: ${(p) => p.theme.colors?.text_color};
     }
     label {
@@ -28,6 +29,9 @@ const ToolbarWrapper = styled.aside`
         border-radius: 10px;
         overflow-y: scroll;
         padding: 10px;
+    }
+    @media only screen and (max-width: 900px) {
+        width: 40vh;
     }
 `;
 

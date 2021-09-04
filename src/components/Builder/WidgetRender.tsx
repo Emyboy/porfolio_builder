@@ -8,7 +8,7 @@ interface Props {
     onClick: () => void;
 }
 
-const WidgetWrapper = styled.div`
+const Wrapper = styled.div`
     :hover {
         border: 5px dotted pink;
     }
@@ -33,6 +33,6 @@ export default function WidgetRender({
     };
 
     return (
-        <WidgetWrapper data-testid='widget-wrapper' onClick={props.onClick}>{returnWidget()}</WidgetWrapper>
+        <Wrapper data-testid='widget-renderer' onClick={props.onClick}>{returnWidget()}</Wrapper>
     );
 }

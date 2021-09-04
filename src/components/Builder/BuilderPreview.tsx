@@ -30,7 +30,7 @@ export default function BuilderPreview({}: Props): ReactElement {
   };
   return (
     <div className="row h-100 justify-content-start" data-testid='builder-preview'>
-      <div className="h-100 col-lg-9 col-sm-12 mt-3">
+      <div className="h-100 col-lg-9 col-sm-12 mt-3 p-0">
         <div
           className="builder-body m-1 shadow"
           style={{ overflow: "scroll", height: "92vh", overflowX: "hidden" }}
