@@ -16,6 +16,7 @@ export interface JumbotronType {
   body_style: React.CSSProperties | null;
   description: string;
   avatar_container_style: React.CSSProperties | null;
+  avatar_url: string,
   linkedin?: string;
   twitter?: string;
   facebook?: string;
@@ -23,5 +24,6 @@ export interface JumbotronType {
   github?: string;
   dribble?: string;
   instagram?: string;
+  website?: string;
   social_icon_size?: number | string;
 }

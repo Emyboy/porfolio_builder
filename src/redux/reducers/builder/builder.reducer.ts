@@ -4,6 +4,7 @@ import {
   UPDATE_WIDGET_DATA,
 } from "@redux/actions/builder/builder.action.types";
 import { BuilderAction, BuilderStateTypes } from "./builder.reducer.types";
+import HeadingDataset from "@widgets/Heading/Heading.dataset";
 
 const initialState: BuilderStateTypes = {
   meta_title: "",
@@ -13,8 +14,9 @@ const initialState: BuilderStateTypes = {
   theme_color: '',
   index: 1,
   widget_list: [
+    dummy_jumbotron_data,
     // dummy_jumbotron_data,
-    // dummy_jumbotron_data,
+    HeadingDataset
   ],
 };
 

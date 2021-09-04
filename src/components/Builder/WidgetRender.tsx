@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { JumbotronWidget } from "@widgets/jumbotron/Jumbotron.widget";
+import HeadingWidget from "@widgets/Heading/Heading.widget";
 
 interface Props {
     type: string;
@@ -27,6 +28,8 @@ export default function WidgetRender({
         switch (type) {
             case "jumbotron":
                 return <JumbotronWidget widget_data={props} />;
+            case "heading":
+                return <HeadingWidget widget_data={props} />;
             default:
                 return <></>;
         }

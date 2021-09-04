@@ -61,7 +61,7 @@ export default function ImageSelectorTool({
                     {selectedImageFile ? (
                         <div>
                             <img
-                                src={URL.createObjectURL(selectedImageFile)}
+                                src={selectedImageFile}
                                 alt="preview"
                                 width="30"
                             />
