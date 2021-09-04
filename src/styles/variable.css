@@ -1,0 +1,19 @@
+:root {
+  --bg_color: #252735;
+  --fg_color: #2A3142;
+  --accent_color: #2A3142;
+  --text_color: #6894BE;
+  --theme_color: #02A499;
+}
+.text-theme {
+  color: var(--theme_color) !important;
+}
+.text-accent {
+  color: var(--accent_color) !important;
+}
+.bg-theme {
+  background-color: var(--theme_color) !important;
+}
+.bg-accent {
+  background-color: var(--accent_color) !important;
+}

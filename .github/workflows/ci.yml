@@ -5,6 +5,7 @@ on:
         branches:
             - main
             - master
+            - develop
     pull_request:
         branches:
             - main
@@ -47,5 +48,5 @@ jobs:
             - name: Run tests
               run: yarn test
 
-            - name: Run e2e test
-              run: yarn cypress:test
+            # - name: Run e2e test
+            #   run: yarn cypress:test

@@ -1,0 +1,30 @@
+@import url(./variable.css);
+.ant-slider-handle {
+    margin-top: -2px;
+}
+.ant-switch {
+    background-color: var(--theme_color);
+}
+.ant-slider-track {
+    background-color: var(--text_color);
+    padding: 5px;
+}
+.ant-slider-rail {
+    padding: 5px;
+}
+
+/* ----------------- Collapse ------------------ */
+.ant-collapse-header {
+    padding: 5px !important;
+    background-color: var(--accent_color);
+    color: var(--theme_color) !important;
+}
+.ant-collapse-content-box {
+    background-color: var(--accent_color);
+    padding-left: 0px !important;
+    padding-bottom: 2px !important;
+}
+.ant-collapse-content-box {
+    padding-top: 1px !important;
+    border-top: 0 !important;
+}

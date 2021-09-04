@@ -1,10 +1,8 @@
-// import dummy_jumbotron_data, {
-//   CartWithImageDummy,
-// } from "../../../../dummy_data/dummy_jumbotron_data";
+import dummy_jumbotron_data from "@widgets/jumbotron/Jumbotron.dataset";
 import {
   SET_BUILDER_STATE,
   UPDATE_WIDGET_DATA,
-} from "../../actions/builder/builder.action.types";
+} from "@redux/actions/builder/builder.action.types";
 import { BuilderAction, BuilderStateTypes } from "./builder.reducer.types";
 
 const initialState: BuilderStateTypes = {
@@ -16,9 +14,7 @@ const initialState: BuilderStateTypes = {
   index: 1,
   widget_list: [
     // dummy_jumbotron_data,
-    // CartWithImageDummy,
     // dummy_jumbotron_data,
-    // CartWithImageDummy,
   ],
 };
 

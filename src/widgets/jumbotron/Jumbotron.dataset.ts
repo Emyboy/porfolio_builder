@@ -3,16 +3,29 @@ export default {
     type: "jumbotron",
     css: "",
     markup: "",
+    linkedin: "",
+    twitter: "",
+    instagram: "",
+    facebook: "",
+    skype: "",
+    github: "",
+    dribble: "",
+    social_icon_size: 30,
     container_style: {
         backgroundColor: "#e8e8e8",
+        marginBottom: '50px',
+        height: '50vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     body_style: {
         display: "flex",
-        // flexDirection: "row",
-        // justifyContent: "center",
+        flexDirection: "row",
+        justifyContent: "flex-start",
     },
     display_name: "Default Jumbotron",
-    description: "This is used for display stuff at the top, like in into",
+    description: "This is a default bootstrap jumbotron",
     heading: "Your Name",
     sub_heading: "A Short Description About Yourself",
     heading_style: {
@@ -23,5 +36,9 @@ export default {
     avatar_url: null,
     avatar_style: {
         borderRadius: "10px",
+    },
+    avatar_container_style: {
+        borderRadius: "10px",
+        justifyContent: "center",
     },
 };

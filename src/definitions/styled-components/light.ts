@@ -6,13 +6,10 @@ import { common } from "./common";
 const light: DefaultTheme = {
     colors: {
         ...common.colors,
-        toggleBorder: "#ABB7C4",
-        gradient: "linear-gradient(#39598A, #79D7ED)",
-        background: "#282C34",
-        headerBg: "#20232A",
-        cardsBg: "#FFFFFF",
-        textColor: "#000000",
-        dodgerBlue: "#007BFF",
+        background: "#acb5f3",
+        accent_color: "#8da5dd",
+        theme_color: "#02A499",
+        text_color: "#6894BE",
     },
 };
 

@@ -9,7 +9,7 @@ const Home: React.FC = () => {
     return (
         <div>
             <Button onClick={() => {}}>{"Click Me"}</Button>
-            <JumbotronWidget index={1}  {...JumbotronDataset} />
+            <h2>Landing Page</h2>
         </div>
     );
 };

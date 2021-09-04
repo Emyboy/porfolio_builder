@@ -1,0 +1,29 @@
+@import url(variable.css);
+* {
+  transition: 200ms ease-in !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(37, 32, 63);
+  border-radius: 10px;
+}
+.text-shadow {
+  text-shadow: 0px 1px 5px rgb(0, 0, 0) !important;
+}
+/* #aside {
+  visibility: hidden;
+} */
