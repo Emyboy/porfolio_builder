@@ -1,3 +1,5 @@
+[![ci](https://github.com/Emyboy/porfolio_builder/actions/workflows/ci.yml/badge.svg)](https://github.com/Emyboy/porfolio_builder/actions/workflows/ci.yml)
+
 # Portfolio Builder
 This is an app that allows users to build out their resumes, portfolio and in the future a website of their own.
 ## Getting Started
