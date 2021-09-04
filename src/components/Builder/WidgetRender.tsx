@@ -33,6 +33,6 @@ export default function WidgetRender({
     };
 
     return (
-        <WidgetWrapper onClick={props.onClick}>{returnWidget()}</WidgetWrapper>
+        <WidgetWrapper data-testid='widget-wrapper' onClick={props.onClick}>{returnWidget()}</WidgetWrapper>
     );
 }

@@ -22,10 +22,10 @@ export default {
     body_style: {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "flex-start",
     },
     display_name: "Default Jumbotron",
-    description: "This is used for display stuff at the top, like in into",
+    description: "This is a default bootstrap jumbotron",
     heading: "Your Name",
     sub_heading: "A Short Description About Yourself",
     heading_style: {

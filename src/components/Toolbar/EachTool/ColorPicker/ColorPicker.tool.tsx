@@ -22,7 +22,7 @@ export const ColorPicker: React.FC<Props> = ({ label, onColorChange, defaultValu
     return (
         <Wrapper>
             <FormGroup label={label}>
-                <input defaultValue={defaultValue} type="color" onChange={onColorChange} />
+                <input defaultValue={defaultValue} type="color" onChange={onColorChange} data-testid="color-picker-input" />
             </FormGroup>
         </Wrapper>
     );

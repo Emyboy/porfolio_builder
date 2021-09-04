@@ -16,15 +16,16 @@ export default function FormGroup({
     divided,
 }: Props): ReactElement {
     return (
-        <div className="form-group mt-3">
+        <div className="form-group mt-3" data-testid="form-group">
             <label
                 className={`mb-1 ${labelClassName ? labelClassName : null}`}
                 htmlFor={htmlFor}
             >
-                <b>{label}</b>
+                {/* <b>{label}</b> */}
+                {label}
             </label><br />
             {children}
-            {divided ? <hr /> : null}
+            {divided ? <hr data-testid='form-group-line' /> : null}
         </div>
     );
 }

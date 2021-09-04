@@ -2,7 +2,7 @@ import dummy_jumbotron_data from "@widgets/jumbotron/Jumbotron.dataset";
 import {
   SET_BUILDER_STATE,
   UPDATE_WIDGET_DATA,
-} from "../../actions/builder/builder.action.types";
+} from "@redux/actions/builder/builder.action.types";
 import { BuilderAction, BuilderStateTypes } from "./builder.reducer.types";
 
 const initialState: BuilderStateTypes = {

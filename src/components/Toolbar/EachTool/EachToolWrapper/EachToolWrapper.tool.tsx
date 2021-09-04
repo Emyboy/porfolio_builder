@@ -11,12 +11,14 @@ interface Props {
     disabled?: boolean;
     sectionName?: string;
     withoutDisability?: boolean;
+    label?:string;
+    isOpen?: boolean;
 }
 
 const EachToolWrapper = styled.div`
     label {
         font-size: 17px;
-        color: ${(p) => p.theme.colors.text_color};
+        color: ${(p) => p.theme.colors?.text_color};
         font-weight: 400;
     }
 `;
@@ -27,11 +29,13 @@ export default function EachToolWrapperTool({
     disabled,
     sectionName,
     withoutDisability,
+    label,
+    isOpen
 }: Props): ReactElement {
     return (
         <EachToolWrapper>
             <Collapse
-                defaultActiveKey={["1"]}
+                defaultActiveKey={[`${isOpen ? 1: ''}`]}
                 onChange={() => {}}
                 className="mt-3 border-0"
             >
@@ -39,9 +43,9 @@ export default function EachToolWrapperTool({
                     <div className="form-group mt-1 p-0">
                         {withoutDisability ? null : (
                             <div className="d-flex justify-content-between mb-4">
-                                <label className="ml-5 pl-5">Use Avatar</label>
+                                <label className="ml-5 pl-5">{label}</label>
                                 <Switch
-                                    style={{ alignSelf: "center" }}
+                                    style={{ alignSelf: "center" }} 
                                     size="small"
                                     checked={!disabled}
                                     onChange={(e) => setDisabled(!disabled)}

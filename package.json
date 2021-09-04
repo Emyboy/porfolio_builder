@@ -9,7 +9,7 @@
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
         "prettier": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-        "test": "jest -c test/jest.config.js",
+        "test": "jest -c test/jest.config.js --coverage",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run --config video=false",
         "cypress:test": "start-server-and-test start http://localhost:yarn cypress:run"

@@ -15,16 +15,16 @@ const ToolbarWrapper = styled.aside`
     top: 40px;
     width: 23%;
     height: 90vh;
-    color: ${(p) => p.theme.colors.text_color};
+    color: ${(p) => p.theme.colors?.text_color};
     z-index: 50;
     p, h3 {
-        color: ${(p) => p.theme.colors.text_color};
+        color: ${(p) => p.theme.colors?.text_color};
     }
     label {
-        color: ${(p) => p.theme.colors.text_color};
+        color: ${(p) => p.theme.colors?.text_color};
     }
     .right-panel {
-        background-color: ${(p) => p.theme.colors.accent_color};
+        background-color: ${(p) => p.theme.colors?.accent_color};
         border-radius: 10px;
         overflow-y: scroll;
         padding: 10px;
@@ -33,7 +33,6 @@ const ToolbarWrapper = styled.aside`
 
 export default function Toolbar({ children, index }: Props): ReactElement {
     const builder = useSelector((state: StoreState) => state.builder);
-
   return (
       <ToolbarWrapper id="aside">
           <div className="right-panel m-1 h-100">

@@ -176,12 +176,14 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                             onChange={(e) =>
                                 updateKeyValues(e.target.value, "twitter")
                             }
+                            defaultValue={widget_data.twitter}
                         />
                         <InputField
                             label="LinkedIn"
                             onChange={(e) =>
                                 updateKeyValues(e.target.value, "linkedin")
                             }
+                            defaultValue={widget_data.linkedin}
                         />
                     </EachToolWrapperTool>
                 </div>
@@ -189,11 +191,12 @@ export const JumbotronWidget = (props: Props): ReactElement => {
         >
             <div
                 className="jumbotron p-4"
+                data-testid='jumbotron-widget'
                 style={{ ...widget_data.container_style }}
             >
                 <div className="">
                     <div className="container">
-                        <div className="row g-xl-5">
+                        <div className="row g-xl-5" style={{...widget_data.body_style}}>
                             {widget_data.has_avatar ? (
                                 <div
                                     className="col-md-4 d-flex align-items-center aos-init aos-animate"

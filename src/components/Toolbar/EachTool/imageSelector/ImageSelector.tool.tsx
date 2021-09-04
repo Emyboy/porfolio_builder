@@ -10,10 +10,10 @@ interface Props {
 
 const Wrapper = styled.div`
     button {
-        border: 1px solid ${(p) => p.theme.colors.text_color};
+        border: 1px solid ${(p) => p.theme.colors?.text_color};
         border-radius: 5px;
-        background-color: ${(p) => p.theme.colors.theme_color};
-        color: ${(p) => p.theme.colors.background};
+        background-color: ${(p) => p.theme.colors?.theme_color};
+        color: ${(p) => p.theme.colors?.background};
         font-weight: 500;
     }
     img {
@@ -40,7 +40,12 @@ export default function ImageSelectorTool({
             >
                 <div className="d-flex justify-content-between">
                     <>
-                        <button id="plus" onClick={upload} disabled={disabled}>
+                        <button
+                            id="plus"
+                            onClick={upload}
+                            disabled={disabled}
+                            data-testid="image-file-picker"
+                        >
                             {selectedImageFile
                                 ? "Change Image"
                                 : "Select Image"}

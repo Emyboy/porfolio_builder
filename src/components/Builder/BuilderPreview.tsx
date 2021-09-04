@@ -29,7 +29,7 @@ export default function BuilderPreview({}: Props): ReactElement {
     );
   };
   return (
-    <div className="row h-100 justify-content-start">
+    <div className="row h-100 justify-content-start" data-testid='builder-preview'>
       <div className="h-100 col-lg-9 col-sm-12 mt-3">
         <div
           className="builder-body m-1 shadow"
