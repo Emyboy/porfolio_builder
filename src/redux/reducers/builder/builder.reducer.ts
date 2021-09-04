@@ -6,6 +6,14 @@ import {
 import { BuilderAction, BuilderStateTypes } from "./builder.reducer.types";
 import HeadingDataset from "@widgets/Heading/Heading.dataset";
 
+const mockList = [
+    dummy_jumbotron_data,
+    HeadingDataset,
+    dummy_jumbotron_data,
+    HeadingDataset,
+    dummy_jumbotron_data,
+];
+
 const initialState: BuilderStateTypes = {
   meta_title: "",
   meta_description: "",
@@ -13,11 +21,7 @@ const initialState: BuilderStateTypes = {
   keywords: "",
   theme_color: '',
   index: 1,
-  widget_list: [
-    // dummy_jumbotron_data,
-    // dummy_jumbotron_data,
-    // HeadingDataset
-  ],
+  widget_list:[]
 };
 
 export default (state = initialState, { type, payload }: BuilderAction) => {

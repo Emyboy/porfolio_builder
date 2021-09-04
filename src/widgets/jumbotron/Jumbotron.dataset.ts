@@ -1,7 +1,7 @@
 import Global from "Global";
 
 export default {
-    _id: "2-5234-5-324-523534-4r",
+    id: "1",
     type: "jumbotron",
     css: "",
     markup: "",

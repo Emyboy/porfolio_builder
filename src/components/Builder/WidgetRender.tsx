@@ -10,6 +10,7 @@ interface Props {
 }
 
 const Wrapper = styled.div`
+transition: 0ms ease-in !important;
     :hover {
         border: 5px dotted pink;
     }
@@ -36,6 +37,6 @@ export default function WidgetRender({
     };
 
     return (
-        <Wrapper data-testid='widget-renderer' onClick={props.onClick}>{returnWidget()}</Wrapper>
+        <Wrapper data-testid='widget-renderer' onDoubleClick={props.onClick} >{returnWidget()}</Wrapper>
     );
 }

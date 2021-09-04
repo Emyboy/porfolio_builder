@@ -1,5 +1,5 @@
 export default {
-    _id: "a646a-446-464w6-4a-4w",
+    id: "0",
     display_name: "Heading",
     description: "",
     type: "heading",

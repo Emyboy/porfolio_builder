@@ -16,7 +16,7 @@ export default function WidgetWrapper({
 }: Props): ReactElement {
     const app = useSelector((state: StoreState) => state.app);
     return (
-        <div data-testid='widget-wrapper'>
+        <div data-testid="widget-wrapper">
             {children}
             {app.toolsIndex === index ? (
                 <Toolbar index={index}>{toolkit}</Toolbar>
