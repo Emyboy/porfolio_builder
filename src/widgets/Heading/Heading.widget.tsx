@@ -1,4 +1,4 @@
-import InputField from "@components/Toolbar/EachTool/InputField/InputField.tool";
+import InputField from "@components/InputField/InputField.tool";
 import WidgetWrapper from "@components/WidgetWrapper/WidgetWrapper";
 import { updateWidgetData } from "@redux/actions/builder/builder.action";
 import React, { ReactElement } from "react";

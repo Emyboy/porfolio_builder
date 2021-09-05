@@ -10,9 +10,10 @@ interface Props {
 }
 
 const Wrapper = styled.div`
-transition: 0ms ease-in !important;
+    transition: 0ms ease-in !important;
     :hover {
-        border: 5px dotted pink;
+        box-shadow: 0px -1px 21px -3px ${(p) => p.theme.colors?.theme_color} !important;
+        /* border: 5px dotted pink; */
     }
 `;
 

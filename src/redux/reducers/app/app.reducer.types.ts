@@ -1,6 +1,5 @@
 export interface AppReducerTypes {
-  toolsIndex: number | null;
-  // isDragging: boolean;
+  toolsIndex: number;
 }
 
 export interface AppActionTypes {

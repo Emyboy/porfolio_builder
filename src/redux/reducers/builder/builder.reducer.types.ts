@@ -11,4 +11,5 @@ export interface BuilderStateTypes {
     widget_list: any[];
     theme_color: string;
     keywords: string;
+    id: number;
 }

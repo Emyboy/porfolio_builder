@@ -2,12 +2,11 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { StoreState } from "@redux/store/store";
+import RenderToolSets from "./RenderToolSets/RenderToolSets";
+import { Button } from "@components/Button/Button.component";
+import { BiTrashAlt } from "react-icons/bi";
 
-
-interface Props {
-  children: ReactElement[] | ReactElement;
-  index: number;
-}
+interface Props {}
 
 const ToolbarWrapper = styled.aside`
     position: fixed;
@@ -35,20 +34,35 @@ const ToolbarWrapper = styled.aside`
     }
 `;
 
-export default function Toolbar({ children, index }: Props): ReactElement {
+const Toolbar = ({}: Props) => {
     const builder = useSelector((state: StoreState) => state.builder);
-  return (
-      <ToolbarWrapper id="aside">
-          <div className="right-panel m-1 h-100">
-              <h3>
-                  {builder.widget_list[index].display_name}
-              </h3>
-              <p>
-                  {builder.widget_list[index].description}
-              </p>
-              <hr />
-              {children}
-          </div>
-      </ToolbarWrapper>
-  );
-}
+    const app = useSelector((state: StoreState) => state.app);
+    if (builder.widget_list.length > 0) {
+        return (
+            <ToolbarWrapper id="aside">
+                <div className="right-panel m-1 h-100">
+                    <h3>{builder.widget_list[app.toolsIndex].display_name}</h3>
+                    <p>{builder.widget_list[app.toolsIndex].description}</p>
+                    <hr />
+                    <RenderToolSets />
+                    {app.toolsIndex || app.toolsIndex === 0? (
+                        <>
+                            <hr />
+                            <div className="text-center mb-3">
+                                <Button outlined onClick={() => {}}>
+                                    <>
+                                        <BiTrashAlt /> <span>Remove</span>
+                                    </>
+                                </Button>
+                            </div>
+                        </>
+                    ) : null}
+                </div>
+            </ToolbarWrapper>
+        );
+    } else {
+        return null;
+    }
+};
+
+export default Toolbar;

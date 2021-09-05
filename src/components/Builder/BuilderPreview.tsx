@@ -13,6 +13,7 @@ import { WidgetSideNav } from "./Builder.styled";
 import WidgetRender from "./WidgetRender";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@components/Button/Button.component";
+import Toolbar from "@components/Toolbar/Toolbar";
 
 interface Props {}
 
@@ -82,23 +83,11 @@ export default function BuilderPreview({}: Props): ReactElement {
                 widget_list: items,
             },
         });
-        store.dispatch({
-            type: "UPDATE_APP_STATE",
-            payload: {
-                ...app,
-                toolsIndex: null,
-            },
-        });
+      
     };
 
     const onDrag = () => {
-        store.dispatch({
-            type: 'UPDATE_APP_STATE',
-            payload: {
-                ...app,
-                toolsIndex: null,
-            },
-        });
+       
     };
 
     return (
@@ -122,17 +111,8 @@ export default function BuilderPreview({}: Props): ReactElement {
                                     {...provided.droppableProps}
                                     ref={provided.innerRef}
                                     style={{ width: "100%" }}
-                                    onMouseDown={() => {
-                                        dispatch({
-                                            type: "SET_APP_STATE",
-                                            payload: {
-                                                toolsIndex: null,
-                                            },
-                                        });
-                                    }}
                                 >
                                     {builder.widget_list.map((item, index) => {
-                                        console.log(item)
                                         return (
                                             <Draggable
                                                 key={item.id}
@@ -188,7 +168,9 @@ export default function BuilderPreview({}: Props): ReactElement {
                         </Button>
                     </div>
                 </div>
-                <div></div>
+                <div>
+                    <Toolbar />
+                </div>
             </div>
             {/* <div className="h-100 col-3 h-50">
          <div className="m-1 h-100"></div>

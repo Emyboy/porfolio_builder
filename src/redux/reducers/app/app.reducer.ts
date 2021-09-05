@@ -1,7 +1,7 @@
 import { AppActionTypes, AppReducerTypes } from "./app.reducer.types";
 
 const initialState: AppReducerTypes = {
-  toolsIndex: null,
+  toolsIndex: 0,
   // isDragging: false
 };
 
