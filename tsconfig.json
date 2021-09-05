@@ -33,6 +33,6 @@
             "@test": ["test"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.js"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx"],
     "exclude": ["node_modules", "test/*", "cypress/*"]
 }

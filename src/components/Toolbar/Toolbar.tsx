@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { StoreState } from "@redux/store/store";
@@ -17,7 +17,7 @@ const ToolbarWrapper = styled.aside`
     color: ${(p) => p.theme.colors?.text_color};
     z-index: 50;
     p,
-    h3 {
+    h3, h6 {
         color: ${(p) => p.theme.colors?.text_color};
     }
     label {
@@ -35,6 +35,7 @@ const ToolbarWrapper = styled.aside`
 `;
 
 const Toolbar = ({}: Props) => {
+    const [confirmDelete, setConfirmDelete] = useState(false)
     const builder = useSelector((state: StoreState) => state.builder);
     const app = useSelector((state: StoreState) => state.app);
     if (builder.widget_list.length > 0) {
@@ -45,17 +46,39 @@ const Toolbar = ({}: Props) => {
                     <p>{builder.widget_list[app.toolsIndex].description}</p>
                     <hr />
                     <RenderToolSets />
-                    {app.toolsIndex || app.toolsIndex === 0? (
-                        <>
-                            <hr />
-                            <div className="text-center mb-3">
-                                <Button outlined onClick={() => {}}>
-                                    <>
-                                        <BiTrashAlt /> <span>Remove</span>
-                                    </>
-                                </Button>
-                            </div>
-                        </>
+                    <hr />
+                    {app.toolsIndex || app.toolsIndex === 0 ? (
+                        <div>
+                            {confirmDelete ? (
+                                <div className="text-center">
+                                    <h6>Are you sure?</h6>
+                                    <div className="d-flex justify-content-around mt-3">
+                                        <Button onClick={() => {}}>
+                                            <span>Yes</span>
+                                        </Button>
+                                        <Button
+                                            outlined
+                                            onClick={() =>
+                                                setConfirmDelete(false)
+                                            }
+                                        >
+                                            <span>No</span>
+                                        </Button>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="text-center mb-3">
+                                    <Button
+                                        outlined
+                                        onClick={() => setConfirmDelete(true)}
+                                    >
+                                        <>
+                                            <BiTrashAlt /> <span>Remove</span>
+                                        </>
+                                    </Button>
+                                </div>
+                            )}
+                        </div>
                     ) : null}
                 </div>
             </ToolbarWrapper>
