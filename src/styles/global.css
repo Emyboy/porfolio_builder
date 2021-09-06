@@ -30,3 +30,6 @@
 .hero {
   /* background: url('../../public/hero.png'); */
 }
+a {
+  text-decoration: none !important;
+}

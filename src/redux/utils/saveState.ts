@@ -1,7 +1,8 @@
-const saveState = (state) => {
+
+const saveState = (state: any) => {
     try {
         const storedState = JSON.stringify(state);
-        localStorage.setItem('state', storedState);
+        localStorage.setItem("state", storedState);
     } catch (err) {
         return undefined;
     }

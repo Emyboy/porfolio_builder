@@ -86,10 +86,6 @@ export default function BuilderPreview({}: Props): ReactElement {
       
     };
 
-    const onDrag = () => {
-       
-    };
-
     return (
         <div
             className="row h-100 justify-content-start shadow"
@@ -104,7 +100,7 @@ export default function BuilderPreview({}: Props): ReactElement {
                         overflowX: "hidden",
                     }}
                 >
-                    <DragDropContext onDragEnd={onDragEnd} onBeforeDragStart={onDrag} onBeforeCapture={onDrag} onDragStart={onDrag}>
+                    <DragDropContext onDragEnd={onDragEnd} >
                         <Droppable droppableId="droppable">
                             {(provided, snapshot) => (
                                 <div
@@ -138,6 +134,7 @@ export default function BuilderPreview({}: Props): ReactElement {
                                                                     payload: {
                                                                         toolsIndex:
                                                                             index,
+                                                                            showToolbar: true
                                                                     },
                                                                 });
                                                             }}

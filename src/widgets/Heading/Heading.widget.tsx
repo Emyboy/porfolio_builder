@@ -28,7 +28,7 @@ export default function HeadingWidget({ widget_data }: Props): ReactElement {
         const editedData = {
             ...data,
             [parentKey]: {
-                ...data[parentKey],
+                // ...data[parentKey],
                 [key]: value,
             },
         };

@@ -36,24 +36,24 @@ const Hero = styled.div`
         position: fixed;
         z-index: 80;
     }
-    @media only screen and (max-width: 600px) {
+    @media (min-width: 311px) {
         background-position: -10vw;
         /* height: 70vh; */
         video {
             position: fixed;
-            right: -15em;
+            right: -50em;
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
             z-index: 0;
         }
     }
-    @media only screen and (max-width: 1200px) {
+    @media (min-width: 992px) {
         background-position: -10vw;
         /* height: 70vh; */
         video {
             position: fixed;
-            right: -34em;
+            right: 0;
             bottom: 0;
             min-width: 100%;
             min-height: 100%;

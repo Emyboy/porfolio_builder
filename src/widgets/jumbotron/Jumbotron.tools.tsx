@@ -21,7 +21,6 @@ export default function JumbotronTools({}: Props): ReactElement {
             ...data,
             [key]: value,
         };
-        console.log("NEW DATA ---", editedData);
 
         dispatch(updateWidgetData(editedData));
     };
@@ -57,7 +56,10 @@ export default function JumbotronTools({}: Props): ReactElement {
             <EachToolWrapperTool
                 sectionName="Avatar Image"
                 setDisabled={() =>
-                    updateKeyValues(!widget_list[toolsIndex].has_avatar, "has_avatar")
+                    updateKeyValues(
+                        !widget_list[toolsIndex].has_avatar,
+                        "has_avatar",
+                    )
                 }
                 disabled={!widget_list[toolsIndex].has_avatar}
             >
@@ -117,7 +119,9 @@ export default function JumbotronTools({}: Props): ReactElement {
                             "sub_heading_style",
                         )
                     }
-                    defaultValue={widget_list[toolsIndex].sub_heading_style?.color}
+                    defaultValue={
+                        widget_list[toolsIndex].sub_heading_style?.color
+                    }
                 />
                 <ColorPicker
                     label="Background"
@@ -128,7 +132,9 @@ export default function JumbotronTools({}: Props): ReactElement {
                             "container_style",
                         )
                     }
-                    defaultValue={widget_list[toolsIndex].container_style?.backgroundColor}
+                    defaultValue={
+                        widget_list[toolsIndex].container_style?.backgroundColor
+                    }
                 />
             </EachToolWrapperTool>
             <EachToolWrapperTool
@@ -160,21 +166,38 @@ export default function JumbotronTools({}: Props): ReactElement {
                 setDisabled={() => {}}
             >
                 <InputField
-                    label="Twitter"
+                    label="Twitter URL"
                     onChange={(e) => updateKeyValues(e.target.value, "twitter")}
                     defaultValue={widget_list[toolsIndex].twitter}
                 />
                 <InputField
-                    label="LinkedIn"
+                    label="LinkedIn URL"
                     onChange={(e) =>
                         updateKeyValues(e.target.value, "linkedin")
                     }
                     defaultValue={widget_list[toolsIndex].linkedin}
                 />
                 <InputField
-                    label="Github"
+                    label="Github URL"
                     onChange={(e) => updateKeyValues(e.target.value, "github")}
                     defaultValue={widget_list[toolsIndex].github}
+                />
+                <InputField
+                    label="Facebook URL"
+                    onChange={(e) =>
+                        updateKeyValues(e.target.value, "facebook")
+                    }
+                    defaultValue={widget_list[toolsIndex].facebook}
+                />
+                <InputField
+                    label="Skype URL"
+                    onChange={(e) => updateKeyValues(e.target.value, "skype")}
+                    defaultValue={widget_list[toolsIndex].skype}
+                />
+                <InputField
+                    label="Instagram URL"
+                    onChange={(e) => updateKeyValues(e.target.value, "instagram")}
+                    defaultValue={widget_list[toolsIndex].instagram}
                 />
             </EachToolWrapperTool>
         </div>

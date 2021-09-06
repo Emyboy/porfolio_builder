@@ -2,7 +2,7 @@ import { AppActionTypes, AppReducerTypes } from "./app.reducer.types";
 
 const initialState: AppReducerTypes = {
   toolsIndex: 0,
-  // isDragging: false
+  showToolbar: true
 };
 
 export default (state = initialState, { type, payload }: AppActionTypes) => {

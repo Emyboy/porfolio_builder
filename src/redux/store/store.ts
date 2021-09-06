@@ -10,9 +10,9 @@ const loadedState = loadState();
 const store = configureStore(loadedState);
 
 store.subscribe(() => {
-    saveState({
+    return saveState({
         builder: store.getState().builder
-    })
+    });
 });
 
 export interface StoreState {

@@ -13,8 +13,6 @@ import {
     AiFillFacebook,
     AiFillSkype,
     AiFillInstagram,
-    AiFillDribbbleCircle,
-    AiOutlineGlobal,
 } from "react-icons/ai";
 
 interface Props {
@@ -27,18 +25,16 @@ export const JumbotronWidget = (props: Props): ReactElement => {
     const data = widget_data;
     
     return (
-        <WidgetWrapper
-            index={widget_data.index}
-        >
+        <WidgetWrapper index={widget_data.index}>
             <div
                 className="jumbotron p-4"
                 data-testid="jumbotron-widget"
                 style={{ ...widget_data.container_style }}
             >
-                <div
+                {/* <div
                     className="row g-xl-5"
                     style={{ ...widget_data.body_style }}
-                >
+                > */}
                     {widget_data.has_avatar ? (
                         <div
                             className="col-md-4 d-flex align-items-center aos-init aos-animate"
@@ -72,7 +68,7 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                         >
                             {widget_data.sub_heading}
                         </p>
-                        <div>
+                        <div className="d-flex justify-content-start col-5">
                             {widget_data.github && (
                                 <a href={widget_data.github} target="_blank">
                                     <AiFillGithub
@@ -97,9 +93,33 @@ export const JumbotronWidget = (props: Props): ReactElement => {
                                     />
                                 </a>
                             )}
+                            {widget_data.facebook && (
+                                <a href={widget_data.facebook} target="_blank">
+                                    <AiFillFacebook
+                                        color={widget_data.heading_style?.color}
+                                        size={widget_data.social_icon_size}
+                                    />
+                                </a>
+                            )}
+                            {widget_data.skype && (
+                                <a href={widget_data.skype} target="_blank">
+                                    <AiFillSkype
+                                        color={widget_data.heading_style?.color}
+                                        size={widget_data.social_icon_size}
+                                    />
+                                </a>
+                            )}
+                            {widget_data.instagram && (
+                                <a href={widget_data.instagram} target="_blank">
+                                    <AiFillInstagram
+                                        color={widget_data.heading_style?.color}
+                                        size={widget_data.social_icon_size}
+                                    />
+                                </a>
+                            )}
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </WidgetWrapper>
     );
