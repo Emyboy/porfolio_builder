@@ -4,6 +4,7 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Head from "next/head";
+import { uuid } from 'uuidv4';
 
 interface Props {}
 
@@ -108,7 +109,7 @@ export default function index({}: Props): ReactElement {
                                 <span>Get Started</span>
                             </Button>
                         </Link>{" "}
-                        <Link href={`/builder/f5234f534f23-f5324f523f`}>
+                        <Link href={`/builder/${uuid()}`}>
                             <Button outlined onClick={() => {}}>
                                 <span>Try Demo</span>
                             </Button>

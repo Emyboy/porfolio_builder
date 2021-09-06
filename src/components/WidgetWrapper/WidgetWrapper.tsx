@@ -5,22 +5,16 @@ import React, { ReactElement, useState } from "react";
 
 interface Props {
     children: ReactElement[] | ReactElement;
-    toolkit?: ReactElement[] | ReactElement;
     index: number;
 }
 
 export default function WidgetWrapper({
     children,
-    toolkit,
-    index,
 }: Props): ReactElement {
     // const app = useSelector((state: StoreState) => state.app);
     return (
         <div data-testid="widget-wrapper">
             {children}
-            {/* {app.toolsIndex === index ? (
-                <Toolbar index={index}>{toolkit}</Toolbar>
-            ) : null} */}
         </div>
     );
 }

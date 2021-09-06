@@ -22,10 +22,10 @@ const initialState: BuilderStateTypes = {
     theme_color: "",
     index: 1,
     id: 1,
-    widget_list: [],
-    // widget_list: mockList.map((val, i) => {
-    //     return { ...val, id: `${i}` };
-    // }),
+    // widget_list: [],
+    widget_list: mockList.map((val, i) => {
+        return { ...val, id: `${i}` };
+    }),
 };
 
 export default (state = initialState, { type, payload }: BuilderAction) => {

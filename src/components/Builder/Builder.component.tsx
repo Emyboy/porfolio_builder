@@ -19,7 +19,7 @@ export const BuilderComponent: React.FC = () => {
                 <nav className="shadow">
                     <div className="d-flex col-lg-2 col-sm-4 justify-content-around">
                             <IconBtn onClick={() => router.push('/')} toolTip="Home">
-                                <AiFillHome />
+                                <AiFillHome size={15} />
                             </IconBtn>
                         <IconBtn
                             onClick={() => {}}

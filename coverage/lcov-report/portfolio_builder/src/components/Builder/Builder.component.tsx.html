@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -86,7 +86,22 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -94,6 +109,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -103,6 +119,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,14 +132,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Button } from '@components/Button/Button.component';
-import React from 'react';
-import { S_Builder } from './Builder.styled';
-import BuilderPreview from './BuilderPreview';
-import Head from 'next/head';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Button } from "@components/Button/Button.component";
+import React from "react";
+import { S_Builder } from "./Builder.styled";
+import BuilderPreview from "./BuilderPreview";
+import Head from "next/head";
+import { AiFillHome, AiFillSetting } from "react-icons/ai";
+import IconBtn from "@components/IconBtn/IconBtn";
+import { useRouter } from "next/router";
 &nbsp;
-&nbsp;
-export const BuilderComponent:React.FC = () =&gt; {
+export const BuilderComponent: React.FC = () =&gt; {
+     const router = useRouter();
     return (
         &lt;S_Builder&gt;
             &lt;Head&gt;
@@ -131,7 +160,18 @@ export const BuilderComponent:React.FC = () =&gt; {
             &lt;/Head&gt;
             &lt;div className="fixed-top row justify-content-center"&gt;
                 &lt;nav className="shadow"&gt;
-                    &lt;h4&gt;Menu&lt;/h4&gt;
+                    &lt;div className="d-flex col-lg-2 col-sm-4 justify-content-around"&gt;
+                            &lt;IconBtn onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >router.push('/')}</span> toolTip="Home"&gt;
+                                &lt;AiFillHome /&gt;
+                            &lt;/IconBtn&gt;
+                        &lt;IconBtn
+                            onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; {}}
+                            className="ml-4"
+                            toolTip="Settings"
+                        &gt;
+                            &lt;AiFillSetting /&gt;
+                        &lt;/IconBtn&gt;
+                    &lt;/div&gt;
                     &lt;Button outlined onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; {}}&gt;
                         &lt;span&gt;Preview&lt;/span&gt;
                     &lt;/Button&gt;
@@ -142,8 +182,7 @@ export const BuilderComponent:React.FC = () =&gt; {
             &lt;/div&gt;
         &lt;/S_Builder&gt;
     );
-}
-&nbsp;
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -151,7 +190,7 @@ export const BuilderComponent:React.FC = () =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Sep 05 2021 13:15:32 GMT+0100 (West Africa Standard Time)
+                at Mon Sep 06 2021 16:22:56 GMT+0100 (West Africa Standard Time)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>

@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">56.25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/10</span>
+                <span class='fraction'>9/16</span>
             </div>
         
             
@@ -163,9 +163,27 @@
 <a name='L104'></a><a href='#L104'>104</a>
 <a name='L105'></a><a href='#L105'>105</a>
 <a name='L106'></a><a href='#L106'>106</a>
-<a name='L107'></a><a href='#L107'>107</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -269,6 +287,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { ReactElement, useState, useEffect } from "react";
 import InputField from "@components/InputField/InputField.tool";
 import { JumbotronType } from "@widgets/jumbotron/Jombotron.type";
@@ -284,8 +324,6 @@ import {
     AiFillFacebook,
     AiFillSkype,
     AiFillInstagram,
-    AiFillDribbbleCircle,
-    AiOutlineGlobal,
 } from "react-icons/ai";
 &nbsp;
 interface Props {
@@ -298,18 +336,16 @@ export const JumbotronWidget = (props: Props): ReactElement =&gt; {
     const data = widget_data;
     
     return (
-        &lt;WidgetWrapper
-            index={widget_data.index}
-        &gt;
+        &lt;WidgetWrapper index={widget_data.index}&gt;
             &lt;div
                 className="jumbotron p-4"
                 data-testid="jumbotron-widget"
                 style={{ ...widget_data.container_style }}
             &gt;
-                &lt;div
+                {/* &lt;div
                     className="row g-xl-5"
                     style={{ ...widget_data.body_style }}
-                &gt;
+                &gt; */}
                     {widget_data.has_avatar ? (
                         &lt;div
                             className="col-md-4 d-flex align-items-center aos-init aos-animate"
@@ -343,7 +379,7 @@ export const JumbotronWidget = (props: Props): ReactElement =&gt; {
                         &gt;
                             {widget_data.sub_heading}
                         &lt;/p&gt;
-                        &lt;div&gt;
+                        &lt;div className="d-flex justify-content-start col-5"&gt;
                             {widget_data.github &amp;&amp; (
 <span class="branch-1 cbranch-no" title="branch not covered" >                                &lt;a href={widget_data.github} target="_blank"&gt;</span>
                                     &lt;AiFillGithub
@@ -368,9 +404,33 @@ export const JumbotronWidget = (props: Props): ReactElement =&gt; {
                                     /&gt;
                                 &lt;/a&gt;
                             )}
+                            {widget_data.facebook &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >                                &lt;a href={widget_data.facebook} target="_blank"&gt;</span>
+                                    &lt;AiFillFacebook
+                                        color={widget_data.heading_style?.color}
+                                        size={widget_data.social_icon_size}
+                                    /&gt;
+                                &lt;/a&gt;
+                            )}
+                            {widget_data.skype &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >                                &lt;a href={widget_data.skype} target="_blank"&gt;</span>
+                                    &lt;AiFillSkype
+                                        color={widget_data.heading_style?.color}
+                                        size={widget_data.social_icon_size}
+                                    /&gt;
+                                &lt;/a&gt;
+                            )}
+                            {widget_data.instagram &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >                                &lt;a href={widget_data.instagram} target="_blank"&gt;</span>
+                                    &lt;AiFillInstagram
+                                        color={widget_data.heading_style?.color}
+                                        size={widget_data.social_icon_size}
+                                    /&gt;
+                                &lt;/a&gt;
+                            )}
                         &lt;/div&gt;
                     &lt;/div&gt;
-                &lt;/div&gt;
+                {/* &lt;/div&gt; */}
             &lt;/div&gt;
         &lt;/WidgetWrapper&gt;
     );
@@ -382,7 +442,7 @@ export const JumbotronWidget = (props: Props): ReactElement =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Sep 05 2021 13:15:32 GMT+0100 (West Africa Standard Time)
+                at Mon Sep 06 2021 16:22:56 GMT+0100 (West Africa Standard Time)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>
