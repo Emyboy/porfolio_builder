@@ -29,7 +29,7 @@ describe("Testing widget render", () => {
     it('should be clickable', () => {
         const mockFnc = jest.fn();
         const {getByTestId} = render(<WidgetRender {...MockRenderProps} onClick={mockFnc} />);
-        fireEvent.click(getByTestId("widget-wrapper"));
+        fireEvent.doubleClick(getByTestId("widget-renderer"));
         expect(mockFnc).toHaveBeenCalledTimes(1);
     })
 

@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Slider as AntSlider, Switch } from "antd";
+import { Slider as AntSlider } from "antd";
 import { SliderSingleProps } from 'antd/lib/slider'
 import FormGroup from "@components/FormGroup/FormGroup";
 

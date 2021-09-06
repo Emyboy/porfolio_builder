@@ -8,4 +8,6 @@ export default {
     decorators: [withKnobs],
 };
 
-export const BasicBtn = () => <Button onClick={() => {}}>Click Me</Button>
+export const BasicBtn = () => <Button onClick={() => {}}><span>Click Me</span></Button>
+export const RoundedBtn = () => <Button rounded onClick={() => {}}><span>I'm Rounded</span></Button>
+export const OutlinedBtn = () => <Button outlined onClick={() => {}}><span>I'm Outlined</span></Button>

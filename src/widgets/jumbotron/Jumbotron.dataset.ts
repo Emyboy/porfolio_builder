@@ -1,5 +1,7 @@
+import Global from "Global";
+
 export default {
-    _id: "2-5234-5-324-523534-4r",
+    id: "1",
     type: "jumbotron",
     css: "",
     markup: "",
@@ -10,18 +12,21 @@ export default {
     skype: "",
     github: "",
     dribble: "",
+    website: "",
     social_icon_size: 30,
     container_style: {
         backgroundColor: "#e8e8e8",
-        marginBottom: '50px',
-        height: '50vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        marginBottom: "50px",
+        height: "50vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
     },
     body_style: {
         display: "flex",
-        flexDirection: "row",
+        // flexDirection: "row",
         justifyContent: "flex-start",
     },
     display_name: "Default Jumbotron",
@@ -31,7 +36,9 @@ export default {
     heading_style: {
         fontWeight: 500,
     },
-    sub_heading_style: null,
+    sub_heading_style: {
+        fontSize: '10px'
+    },
     has_avatar: true,
     avatar_url: null,
     avatar_style: {

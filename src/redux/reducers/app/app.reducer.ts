@@ -1,7 +1,8 @@
 import { AppActionTypes, AppReducerTypes } from "./app.reducer.types";
 
 const initialState: AppReducerTypes = {
-  toolsIndex: null,
+  toolsIndex: 0,
+  showToolbar: true
 };
 
 export default (state = initialState, { type, payload }: AppActionTypes) => {

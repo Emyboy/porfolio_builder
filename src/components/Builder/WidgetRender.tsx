@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { JumbotronWidget } from "@widgets/jumbotron/Jumbotron.widget";
+import HeadingWidget from "@widgets/Heading/Heading.widget";
 
 interface Props {
     type: string;
@@ -8,9 +9,11 @@ interface Props {
     onClick: () => void;
 }
 
-const WidgetWrapper = styled.div`
+const Wrapper = styled.div`
+    transition: 0ms ease-in !important;
     :hover {
-        border: 5px dotted pink;
+        box-shadow: 0px -1px 21px -3px ${(p) => p.theme.colors?.theme_color} !important;
+        /* border: 5px dotted pink; */
     }
 `;
 
@@ -27,12 +30,14 @@ export default function WidgetRender({
         switch (type) {
             case "jumbotron":
                 return <JumbotronWidget widget_data={props} />;
+            case "heading":
+                return <HeadingWidget widget_data={props} />;
             default:
                 return <></>;
         }
     };
 
     return (
-        <WidgetWrapper data-testid='widget-wrapper' onClick={props.onClick}>{returnWidget()}</WidgetWrapper>
+        <Wrapper data-testid='widget-renderer' onDoubleClick={props.onClick} >{returnWidget()}</Wrapper>
     );
 }

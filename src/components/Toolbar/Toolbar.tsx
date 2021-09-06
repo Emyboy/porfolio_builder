@@ -1,13 +1,12 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { StoreState } from "@redux/store/store";
+import RenderToolSets from "./RenderToolSets/RenderToolSets";
+import { Button } from "@components/Button/Button.component";
+import { BiTrashAlt } from "react-icons/bi";
 
-
-interface Props {
-  children: ReactElement[] | ReactElement;
-  index: number;
-}
+interface Props {}
 
 const ToolbarWrapper = styled.aside`
     position: fixed;
@@ -17,7 +16,9 @@ const ToolbarWrapper = styled.aside`
     height: 90vh;
     color: ${(p) => p.theme.colors?.text_color};
     z-index: 50;
-    p, h3 {
+    p,
+    h3,
+    h6 {
         color: ${(p) => p.theme.colors?.text_color};
     }
     label {
@@ -29,22 +30,70 @@ const ToolbarWrapper = styled.aside`
         overflow-y: scroll;
         padding: 10px;
     }
+    @media only screen and (max-width: 900px) {
+        width: 40vh;
+    }
 `;
 
-export default function Toolbar({ children, index }: Props): ReactElement {
+const Toolbar = ({}: Props) => {
+    const [confirmDelete, setConfirmDelete] = useState(false);
     const builder = useSelector((state: StoreState) => state.builder);
-  return (
-      <ToolbarWrapper id="aside">
-          <div className="right-panel m-1 h-100">
-              <h3>
-                  {builder.widget_list[index].display_name}
-              </h3>
-              <p>
-                  {builder.widget_list[index].description}
-              </p>
-              <hr />
-              {children}
-          </div>
-      </ToolbarWrapper>
-  );
-}
+    const app = useSelector((state: StoreState) => state.app);
+    const dispatch = useDispatch();
+    if (builder.widget_list.length > 0 && app.showToolbar) {
+        return (
+            <ToolbarWrapper id="aside">
+                <div className="right-panel m-1 h-100">
+                    <h3>
+                        {builder.widget_list[app.toolsIndex].display_name}
+                    </h3>
+                    <p>{builder.widget_list[app.toolsIndex].description}</p>
+                    <hr />
+                    <RenderToolSets />
+                    <hr />
+                    {app.toolsIndex || app.toolsIndex === 0 ? (
+                        <div>
+                            {confirmDelete ? (
+                                <div className="text-center">
+                                    <h6>Are you sure?</h6>
+                                    <div className="d-flex justify-content-around mt-3">
+                                        <Button
+                                            onClick={() => {}}
+                                            className="col-5"
+                                        >
+                                            <span>Yes</span>
+                                        </Button>
+                                        <Button
+                                            className="col-5"
+                                            outlined
+                                            onClick={() =>
+                                                setConfirmDelete(false)
+                                            }
+                                        >
+                                            <span>No</span>
+                                        </Button>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="text-center mb-3">
+                                    <Button
+                                        outlined
+                                        onClick={() => setConfirmDelete(true)}
+                                    >
+                                        <>
+                                            <BiTrashAlt /> <span>Remove</span>
+                                        </>
+                                    </Button>
+                                </div>
+                            )}
+                        </div>
+                    ) : null}
+                </div>
+            </ToolbarWrapper>
+        );
+    } else {
+        return null;
+    }
+};
+
+export default Toolbar;

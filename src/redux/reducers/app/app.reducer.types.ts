@@ -1,5 +1,6 @@
 export interface AppReducerTypes {
-  toolsIndex: number | null;
+  toolsIndex: number;
+  showToolbar: boolean;
 }
 
 export interface AppActionTypes {
