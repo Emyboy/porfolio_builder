@@ -35,7 +35,7 @@ const Btn = styled.button<StyledProps>`
     width: 35px;
     border-radius: 50%;
     svg {
-        margin-bottom: 7px;
+        margin-bottom: 8px;
     }
     &:hover {
         box-shadow: 10px 18px 26px -18px ${(p) => p.theme.colors?.theme_color} !important;

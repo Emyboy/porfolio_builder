@@ -2,8 +2,12 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-
-interface Props {}
+import IconBtn from "@components/IconBtn/IconBtn";
+import { AiFillHome } from 'react-icons/ai';
+import { useRouter } from 'next/router'
+interface Props {
+    home?: boolean;
+}
 
 const Wrapper = styled.nav`
     position: fixed;
@@ -33,16 +37,21 @@ const Wrapper = styled.nav`
     }
 `;
 
-export default function Navbar({}: Props): ReactElement {
+export default function Navbar({ home }: Props): ReactElement {
+    const router = useRouter();
     return (
         <Wrapper>
             <div className="brand d-flex justify-content-between">
-                <div className='d-flex'>
-                    <Image src="/logo.png" width="50" height="50" />
-                    <span>
-                        <h1>Builder</h1>
-                    </span>
-                </div>
+                {home ? (
+                    <IconBtn onClick={() => router.push('/')}><AiFillHome /></IconBtn>
+                ) : (
+                    <div className="d-flex">
+                        <Image src="/logo.png" width="50" height="50" />
+                        <span>
+                            <h1>Builder</h1>
+                        </span>
+                    </div>
+                )}
                 <Link href="/login">
                     <a>Login</a>
                 </Link>

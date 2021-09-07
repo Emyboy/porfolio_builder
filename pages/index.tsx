@@ -15,6 +15,7 @@ const Hero = styled.div`
     background-size: cover;
     position: relative;
     padding-top: 11em;
+    background-color: ${p => p.theme.colors.background};
     video {
         position: fixed;
         right: 0;
