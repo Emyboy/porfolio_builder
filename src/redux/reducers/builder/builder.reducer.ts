@@ -5,13 +5,17 @@ import {
 } from "@redux/actions/builder/builder.action.types";
 import { BuilderAction, BuilderStateTypes } from "./builder.reducer.types";
 import HeadingDataset from "@widgets/Heading/Heading.dataset";
+import ParagraphDataset from "@widgets/Paragraph/Paragraph.dataset";
 
 const mockList = [
     dummy_jumbotron_data,
     HeadingDataset,
+    ParagraphDataset,
     dummy_jumbotron_data,
     HeadingDataset,
+    ParagraphDataset,
     dummy_jumbotron_data,
+    ParagraphDataset,
 ];
 
 const initialState: BuilderStateTypes = {
@@ -22,10 +26,10 @@ const initialState: BuilderStateTypes = {
     theme_color: "",
     index: 1,
     id: 1,
-    // widget_list: [],
-    widget_list: mockList.map((val, i) => {
-        return { ...val, id: `${i}` };
-    }),
+    widget_list: [],
+    // widget_list: mockList.map((val, i) => {
+    //     return { ...val, id: `${i}` };
+    // }),
 };
 
 export default (state = initialState, { type, payload }: BuilderAction) => {

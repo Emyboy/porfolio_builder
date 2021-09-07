@@ -1,6 +1,5 @@
 import WidgetWrapper from "@components/WidgetWrapper/WidgetWrapper";
 import React, { ReactElement } from "react";
-import { useDispatch } from "react-redux";
 import { HeadingTypes } from "./Heading.type";
 
 interface Props {
@@ -8,8 +7,6 @@ interface Props {
 }
 
 export default function HeadingWidget({ widget_data }: Props): ReactElement {
-    const dispatch = useDispatch();
-    const data = widget_data;
    
     return (
         <WidgetWrapper

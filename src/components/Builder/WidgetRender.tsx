@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { JumbotronWidget } from "@widgets/jumbotron/Jumbotron.widget";
 import HeadingWidget from "@widgets/Heading/Heading.widget";
+import Paragraph from "@widgets/Paragraph/Paragraph.widget";
 
 interface Props {
     type: string;
@@ -32,6 +33,8 @@ export default function WidgetRender({
                 return <JumbotronWidget widget_data={props} />;
             case "heading":
                 return <HeadingWidget widget_data={props} />;
+            case "paragraph":
+                return <Paragraph widget_data={props} />;
             default:
                 return <></>;
         }

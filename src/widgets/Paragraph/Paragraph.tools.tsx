@@ -9,7 +9,7 @@ import LayoutButtons from "@components/LayoutButtons/LayoutButtons";
 
 interface Props {}
 
-export default function HeadingTools({}: Props): ReactElement {
+export default function ParagraphToolSet({}: Props): ReactElement {
     const dispatch = useDispatch();
     const { widget_list } = useSelector((state: StoreState) => state.builder);
     const { toolsIndex } = useSelector((state: StoreState) => state.app);
@@ -42,9 +42,9 @@ export default function HeadingTools({}: Props): ReactElement {
             {/* <h2 className="text-muted">{widget_list[toolsIndex].display_name}</h2>
                     <p className="text-accent">{widget_list[toolsIndex].description}</p> */}
             <InputField
-                onChange={(e) => updateKeyValues(e.target.value, "heading")}
-                label="Heading Text"
-                defaultValue={widget_list[toolsIndex].heading}
+                onChange={(e) => updateKeyValues(e.target.value, "paragraph")}
+                label="Paragraph Text"
+                defaultValue={widget_list[toolsIndex].paragraph}
             />
 
             <EachToolWrapperTool
@@ -53,9 +53,16 @@ export default function HeadingTools({}: Props): ReactElement {
                 setDisabled={() => {}}
             >
                 <LayoutButtons
-                    onChange={(val) => updateNestedkeyValues('justifyContent',val,'container_style')}
+                    options={['left', 'center', 'right']}
+                    onChange={(val) =>
+                        updateNestedkeyValues(
+                            "textAlign",
+                            val,
+                            "paragraph_style",
+                        )
+                    }
                     selected={
-                        widget_list[toolsIndex].container_style?.justifyContent
+                        widget_list[toolsIndex].paragraph_style?.textAlign
                     }
                 />
             </EachToolWrapperTool>

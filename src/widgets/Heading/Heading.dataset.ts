@@ -19,6 +19,7 @@ export default {
         display: 'flex',
         justifyContent: 'center',
         padding: '10px',
-        marginBottom: '20px'
+        paddingBottom: 0,
+        marginBottom: '0px'
     }
 };

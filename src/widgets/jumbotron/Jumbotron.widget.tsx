@@ -27,7 +27,7 @@ export const JumbotronWidget = (props: Props): ReactElement => {
     return (
         <WidgetWrapper index={widget_data.index}>
             <div
-                className="jumbotron p-4"
+                className="jumbotron p-5"
                 data-testid="jumbotron-widget"
                 style={{ ...widget_data.container_style }}
             >

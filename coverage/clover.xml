@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630941776159" clover="3.2.0">
-  <project timestamp="1630941776159" name="All files">
-    <metrics statements="191" coveredstatements="130" conditionals="80" coveredconditionals="51" methods="107" coveredmethods="64" elements="378" coveredelements="245" complexity="0" loc="191" ncloc="191" packages="24" files="33" classes="33"/>
+<coverage generated="1631023415401" clover="3.2.0">
+  <project timestamp="1631023415401" name="All files">
+    <metrics statements="202" coveredstatements="135" conditionals="81" coveredconditionals="53" methods="115" coveredmethods="68" elements="398" coveredelements="256" complexity="0" loc="202" ncloc="202" packages="25" files="35" classes="35"/>
     <package name="portfolio_builder">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Global.ts" path="C:\web\projects\portfolio_builder\Global.ts">
@@ -10,13 +10,13 @@
       </file>
     </package>
     <package name="portfolio_builder.src.components.Builder">
-      <metrics statements="48" coveredstatements="31" conditionals="9" coveredconditionals="2" methods="26" coveredmethods="16"/>
+      <metrics statements="48" coveredstatements="34" conditionals="9" coveredconditionals="3" methods="26" coveredmethods="18"/>
       <file name="Builder.component.tsx" path="C:\web\projects\portfolio_builder\src\components\Builder\Builder.component.tsx">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
       </file>
       <file name="Builder.styled.tsx" path="C:\web\projects\portfolio_builder\src\components\Builder\Builder.styled.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="7"/>
@@ -31,7 +31,7 @@
         <line num="49" count="2" type="cond" truecount="1" falsecount="1"/>
       </file>
       <file name="BuilderPreview.tsx" path="C:\web\projects\portfolio_builder\src\components\Builder\BuilderPreview.tsx">
-        <metrics statements="26" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="12" coveredmethods="5"/>
+        <metrics statements="26" coveredstatements="14" conditionals="4" coveredconditionals="0" methods="12" coveredmethods="7"/>
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="50" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
@@ -54,22 +54,22 @@
         <line num="79" count="0" type="stmt"/>
         <line num="89" count="2" type="stmt"/>
         <line num="106" count="2" type="stmt"/>
-        <line num="112" count="0" type="stmt"/>
-        <line num="119" count="0" type="stmt"/>
+        <line num="112" count="10" type="stmt"/>
+        <line num="119" count="10" type="stmt"/>
         <line num="132" count="0" type="stmt"/>
         <line num="162" count="0" type="stmt"/>
       </file>
       <file name="WidgetRender.tsx" path="C:\web\projects\portfolio_builder\src\components\Builder\WidgetRender.tsx">
-        <metrics statements="9" coveredstatements="7" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="3" type="cond" truecount="1" falsecount="2"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="29" count="13" type="stmt"/>
+        <line num="30" count="13" type="cond" truecount="2" falsecount="1"/>
+        <line num="32" count="9" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
+        <line num="40" count="13" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.Button">
@@ -77,21 +77,21 @@
       <file name="Button.component.tsx" path="C:\web\projects\portfolio_builder\src\components\Button\Button.component.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
         <line num="16" count="3" type="stmt"/>
-        <line num="18" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="9" type="stmt"/>
-        <line num="24" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="30" count="9" type="stmt"/>
+        <line num="18" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="11" type="stmt"/>
+        <line num="24" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="11" type="stmt"/>
         <line num="35" count="3" type="stmt"/>
-        <line num="43" count="9" type="stmt"/>
+        <line num="43" count="11" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.FormGroup">
       <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="FormGroup.tsx" path="C:\web\projects\portfolio_builder\src\components\FormGroup\FormGroup.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="18" count="16" type="stmt"/>
+        <line num="18" count="20" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.IconBtn">
@@ -111,30 +111,41 @@
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="InputField.tool.tsx" path="C:\web\projects\portfolio_builder\src\components\InputField\InputField.tool.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="portfolio_builder.src.components.LayoutButtons">
+      <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="LayoutButtons.tsx" path="C:\web\projects\portfolio_builder\src\components\LayoutButtons\LayoutButtons.tsx">
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.Toolbar">
-      <metrics statements="15" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="10" coveredmethods="7"/>
+      <metrics statements="15" coveredstatements="12" conditionals="10" coveredconditionals="7" methods="10" coveredmethods="7"/>
       <file name="Toolbar.tsx" path="C:\web\projects\portfolio_builder\src\components\Toolbar\Toolbar.tsx">
-        <metrics statements="15" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="10" coveredmethods="7"/>
+        <metrics statements="15" coveredstatements="12" conditionals="10" coveredconditionals="7" methods="10" coveredmethods="7"/>
         <line num="11" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
         <line num="38" count="2" type="stmt"/>
         <line num="39" count="4" type="stmt"/>
         <line num="40" count="8" type="stmt"/>
         <line num="41" count="8" type="stmt"/>
         <line num="42" count="4" type="stmt"/>
-        <line num="43" count="4" type="cond" truecount="4" falsecount="0"/>
-        <line num="44" count="2" type="stmt"/>
+        <line num="43" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="44" count="4" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
         <line num="81" count="0" type="stmt"/>
-        <line num="95" count="2" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.Toolbar.EachTool.ColorPicker">
@@ -152,8 +163,8 @@
         <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="2"/>
         <line num="6" count="3" type="stmt"/>
         <line num="18" count="3" type="stmt"/>
-        <line num="21" count="10" type="stmt"/>
-        <line num="35" count="10" type="stmt"/>
+        <line num="21" count="14" type="stmt"/>
+        <line num="35" count="14" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
       </file>
     </package>
@@ -180,21 +191,22 @@
       </file>
     </package>
     <package name="portfolio_builder.src.components.Toolbar.RenderToolSets">
-      <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <metrics statements="6" coveredstatements="4" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="RenderToolSets.tsx" path="C:\web\projects\portfolio_builder\src\components\Toolbar\RenderToolSets\RenderToolSets.tsx">
-        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="11" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="4" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="1" falsecount="2"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.WidgetWrapper">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="WidgetWrapper.tsx" path="C:\web\projects\portfolio_builder\src\components\WidgetWrapper\WidgetWrapper.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="18" count="5" type="stmt"/>
+        <line num="15" count="17" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.examples.testing-library">
@@ -209,8 +221,8 @@
       <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="builder.action.ts" path="C:\web\projects\portfolio_builder\src\redux\actions\builder\builder.action.ts">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
       </file>
       <file name="builder.action.types.ts" path="C:\web\projects\portfolio_builder\src\redux\actions\builder\builder.action.types.ts">
@@ -238,11 +250,12 @@
       </file>
     </package>
     <package name="portfolio_builder.src.redux.reducers.builder">
-      <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="builder.reducer.ts" path="C:\web\projects\portfolio_builder\src\redux\reducers\builder\builder.reducer.ts">
-        <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <metrics statements="8" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="9" count="12" type="stmt"/>
         <line num="17" count="12" type="stmt"/>
+        <line num="27" count="60" type="stmt"/>
         <line num="32" count="41" type="cond" truecount="2" falsecount="1"/>
         <line num="34" count="5" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
@@ -293,42 +306,50 @@
       </file>
     </package>
     <package name="portfolio_builder.src.widgets.Heading">
-      <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="15" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="1"/>
       <file name="Heading.dataset.ts" path="C:\web\projects\portfolio_builder\src\widgets\Heading\Heading.dataset.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="Heading.widget.tsx" path="C:\web\projects\portfolio_builder\src\widgets\Heading\Heading.widget.tsx">
-        <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Heading.tools.tsx" path="C:\web\projects\portfolio_builder\src\widgets\Heading\Heading.tools.tsx">
+        <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+      </file>
+      <file name="Heading.widget.tsx" path="C:\web\projects\portfolio_builder\src\widgets\Heading\Heading.widget.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="6" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.widgets.jumbotron">
-      <metrics statements="31" coveredstatements="12" conditionals="16" coveredconditionals="9" methods="24" coveredmethods="4"/>
+      <metrics statements="30" coveredstatements="12" conditionals="16" coveredconditionals="9" methods="22" coveredmethods="4"/>
       <file name="Jumbotron.dataset.ts" path="C:\web\projects\portfolio_builder\src\widgets\jumbotron\Jumbotron.dataset.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="Jumbotron.tools.tsx" path="C:\web\projects\portfolio_builder\src\widgets\jumbotron\Jumbotron.tools.tsx">
-        <metrics statements="26" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="23" coveredmethods="3"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
+        <metrics statements="25" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="21" coveredmethods="3"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
+        <line num="42" count="4" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
@@ -338,20 +359,19 @@
         <line num="116" count="0" type="stmt"/>
         <line num="129" count="0" type="stmt"/>
         <line num="148" count="0" type="stmt"/>
-        <line num="170" count="0" type="stmt"/>
-        <line num="176" count="0" type="stmt"/>
-        <line num="182" count="0" type="stmt"/>
-        <line num="188" count="0" type="stmt"/>
-        <line num="194" count="0" type="stmt"/>
-        <line num="199" count="0" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="160" count="0" type="stmt"/>
+        <line num="166" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="177" count="0" type="stmt"/>
       </file>
       <file name="Jumbotron.widget.tsx" path="C:\web\projects\portfolio_builder\src\widgets\jumbotron\Jumbotron.widget.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="16" coveredconditionals="9" methods="1" coveredmethods="1"/>
         <line num="22" count="3" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="25" count="11" type="stmt"/>
+        <line num="27" count="11" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.test">

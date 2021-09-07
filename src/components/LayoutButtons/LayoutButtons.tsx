@@ -8,6 +8,7 @@ interface Props {
     onChange: (alignment: string) => void;
     disabled?: boolean;
     selected: string;
+    options?: string[];
 }
 
 const Wrapper = styled.div`
@@ -20,6 +21,7 @@ export default function LayoutButtons({
     onChange,
     selected,
     disabled,
+    options,
 }: Props): ReactElement {
     return (
         <FormGroup label="Select layout">
@@ -29,22 +31,32 @@ export default function LayoutButtons({
                 aria-label="Basic example"
             >
                 <Button
-                    outlined={selected === "flex-start"}
-                    onClick={() => onChange('flex-start')}
+                    outlined={
+                        selected === `${options ? options[0] : "flex-start"}`
+                    }
+                    onClick={() =>
+                        onChange(`${options ? options[0] : "flex-start"}`)
+                    }
                     disabled={disabled}
                 >
                     <CgAlignLeft size={20} />
                 </Button>
                 <Button
-                    outlined={selected === "center"}
-                    onClick={() => onChange('center')}
+                    outlined={selected === `${options ? options[1] : "center"}`}
+                    onClick={() =>
+                        onChange(`${options ? options[1] : "center"}`)
+                    }
                     disabled={disabled}
                 >
                     <CgAlignCenter size={20} />
                 </Button>
                 <Button
-                    outlined={selected === "flex-end"}
-                    onClick={() => onChange('flex-end')}
+                    outlined={
+                        selected === `${options ? options[2] : "flex-end"}`
+                    }
+                    onClick={() =>
+                        onChange(`${options ? options[2] : "flex-end"}`)
+                    }
                     disabled={disabled}
                 >
                     <CgAlignRight size={20} />

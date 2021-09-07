@@ -18,7 +18,6 @@ describe("Testing Jumbotron widget", () => {
         expect(getByText("A Short Description About Yourself")).toBeTruthy();
         expect(getByText("A Short Description About Yourself").classList).toContain('fs-4');
         expect(getByRole('link').hasAttribute('href')).toBeTruthy()
-        debug()
     })
 
 });
