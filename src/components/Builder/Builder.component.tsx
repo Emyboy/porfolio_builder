@@ -8,7 +8,7 @@ import IconBtn from "@components/IconBtn/IconBtn";
 import { useRouter } from "next/router";
 
 export const BuilderComponent: React.FC = () => {
-     const router = useRouter();
+    const router = useRouter();
     return (
         <S_Builder>
             <Head>
@@ -18,9 +18,12 @@ export const BuilderComponent: React.FC = () => {
             <div className="fixed-top row justify-content-center">
                 <nav className="shadow">
                     <div className="d-flex col-lg-2 col-sm-4 justify-content-around">
-                            <IconBtn onClick={() => router.push('/')} toolTip="Home">
-                                <AiFillHome />
-                            </IconBtn>
+                        <IconBtn
+                            onClick={() => router.push("/")}
+                            toolTip="Home"
+                        >
+                            <AiFillHome size={15} />
+                        </IconBtn>
                         <IconBtn
                             onClick={() => {}}
                             className="ml-4"

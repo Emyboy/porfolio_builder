@@ -6,7 +6,7 @@ export default {
     heading: "Heading",
     heading_style: {
         fontSize: '28px',
-        fontWeight: 700
+        fontWeight: 700,
     },
     index: null,
     has_underline: true,
@@ -17,6 +17,9 @@ export default {
     },
     container_style: {
         display: 'flex',
-        justifyContent: 'flex-start'
+        justifyContent: 'center',
+        padding: '10px',
+        paddingBottom: 0,
+        marginBottom: '0px'
     }
 };

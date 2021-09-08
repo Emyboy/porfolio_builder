@@ -137,28 +137,6 @@ export default function JumbotronTools({}: Props): ReactElement {
                     }
                 />
             </EachToolWrapperTool>
-            <EachToolWrapperTool
-                sectionName="Layout"
-                withoutDisability
-                setDisabled={() => {}}
-            >
-                <Slider
-                    widget_data={widget_list[toolsIndex]}
-                    onChange={(e) =>
-                        updateNestedkeyValues(
-                            "height",
-                            `${e}vh`,
-                            "container_style",
-                        )
-                    }
-                    defaultValue={parseInt(
-                        `${widget_list[toolsIndex].container_style?.height}`,
-                    )}
-                    min={35}
-                    max={90}
-                    label="Height"
-                />
-            </EachToolWrapperTool>
 
             <EachToolWrapperTool
                 sectionName="Socials"

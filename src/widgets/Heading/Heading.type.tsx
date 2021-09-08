@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface HeadingTypes {
-    _id: string;
+    id: string;
     display_name: string;
     description: string;
     type: string;

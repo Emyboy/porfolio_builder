@@ -4,6 +4,7 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Head from "next/head";
+import { uuid } from 'uuidv4';
 
 interface Props {}
 
@@ -14,6 +15,7 @@ const Hero = styled.div`
     background-size: cover;
     position: relative;
     padding-top: 11em;
+    background-color: ${p => p.theme.colors.background};
     video {
         position: fixed;
         right: 0;
@@ -76,7 +78,7 @@ const Wrapper = styled.div`
             rgba(255, 255, 255, 0) 100%
         );
         a {
-            color: ${(p) => p.theme.colors.text_color};
+            color: ${(p) => p.theme.colors?.text_color};
             align-self: center;
             padding-top: 8em;
         }
@@ -108,7 +110,7 @@ export default function index({}: Props): ReactElement {
                                 <span>Get Started</span>
                             </Button>
                         </Link>{" "}
-                        <Link href={`/builder/f5234f534f23-f5324f523f`}>
+                        <Link href={`/builder/${uuid()}`}>
                             <Button outlined onClick={() => {}}>
                                 <span>Try Demo</span>
                             </Button>

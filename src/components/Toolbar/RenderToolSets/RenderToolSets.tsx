@@ -1,5 +1,7 @@
 import { StoreState } from "@redux/store/store";
+import HeadingTools from "@widgets/Heading/Heading.tools";
 import JumbotronTools from "@widgets/jumbotron/Jumbotron.tools";
+import ParagraphToolSet from "@widgets/Paragraph/Paragraph.tools";
 import React, { ReactElement } from "react";
 import { useSelector } from "react-redux";
 
@@ -11,6 +13,10 @@ export default function RenderToolSets({}: Props): ReactElement {
     switch (widget_list[toolsIndex].type) {
         case 'jumbotron':
                 return <JumbotronTools  />
+        case 'heading':
+                return <HeadingTools  />
+        case 'paragraph':
+                return <ParagraphToolSet  />
         default:
             return <div>
                 <h6>Please Select Something</h6>

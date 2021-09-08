@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import styled from "styled-components";
 
 interface Props {
     children: ReactElement | ReactElement[];
@@ -8,6 +9,12 @@ interface Props {
     divided?: boolean;
 }
 
+const Wrapper = styled.div`
+    label {
+        color: ${p => p.theme.colors?.text_color};
+    }
+`;
+
 export default function FormGroup({
     children,
     htmlFor,
@@ -16,7 +23,7 @@ export default function FormGroup({
     divided,
 }: Props): ReactElement {
     return (
-        <div className="form-group mt-3" data-testid="form-group">
+        <Wrapper className="form-group mt-3" data-testid="form-group">
             <label
                 className={`mb-1 ${labelClassName ? labelClassName : null}`}
                 htmlFor={htmlFor}
@@ -26,6 +33,6 @@ export default function FormGroup({
             </label><br />
             {children}
             {divided ? <hr data-testid='form-group-line' /> : null}
-        </div>
+        </Wrapper>
     );
 }

@@ -2,8 +2,12 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-
-interface Props {}
+import IconBtn from "@components/IconBtn/IconBtn";
+import { AiFillHome } from 'react-icons/ai';
+import { useRouter } from 'next/router'
+interface Props {
+    home?: boolean;
+}
 
 const Wrapper = styled.nav`
     position: fixed;
@@ -12,7 +16,7 @@ const Wrapper = styled.nav`
     padding: 20px;
     h1 {
         margin-left: 10px;
-        color: ${(p) => p.theme.colors.text_color};
+        color: ${(p) => p.theme.colors?.text_color};
         margin-bottom: 0%;
         /* margin-top: 2px; */
     }
@@ -20,7 +24,7 @@ const Wrapper = styled.nav`
         border-radius: 10px;
     }
     a {
-        color: ${(p) => p.theme.colors.theme_color};
+        color: ${(p) => p.theme.colors?.theme_color};
         font-size: 18px;
         align-self: self-end;
         margin-bottom: 13px;
@@ -33,16 +37,21 @@ const Wrapper = styled.nav`
     }
 `;
 
-export default function Navbar({}: Props): ReactElement {
+export default function Navbar({ home }: Props): ReactElement {
+    const router = useRouter();
     return (
         <Wrapper>
             <div className="brand d-flex justify-content-between">
-                <div className='d-flex'>
-                    <Image src="/logo.png" width="50" height="50" />
-                    <span>
-                        <h1>Builder</h1>
-                    </span>
-                </div>
+                {home ? (
+                    <IconBtn onClick={() => router.push('/')}><AiFillHome /></IconBtn>
+                ) : (
+                    <div className="d-flex">
+                        <Image src="/logo.png" width="50" height="50" />
+                        <span>
+                            <h1>Builder</h1>
+                        </span>
+                    </div>
+                )}
                 <Link href="/login">
                     <a>Login</a>
                 </Link>

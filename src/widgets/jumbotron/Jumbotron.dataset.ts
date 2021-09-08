@@ -17,7 +17,7 @@ export default {
     container_style: {
         backgroundColor: "#e8e8e8",
         marginBottom: "50px",
-        height: "50vh",
+        height: "auto",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

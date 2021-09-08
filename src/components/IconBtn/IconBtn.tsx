@@ -31,11 +31,11 @@ const Btn = styled.button<StyledProps>`
     transition: all 0.2s ease-in-out !important;
 
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     svg {
-        margin-bottom: 7px;
+        margin-bottom: 8px;
     }
     &:hover {
         box-shadow: 10px 18px 26px -18px ${(p) => p.theme.colors?.theme_color} !important;

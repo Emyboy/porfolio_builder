@@ -1,6 +1,6 @@
 import React from "react";
 export interface JumbotronType {
-  _id: string;
+  id: string;
   type: string;
   css: string;
   markup: string;
@@ -16,7 +16,7 @@ export interface JumbotronType {
   body_style: React.CSSProperties | null;
   description: string;
   avatar_container_style: React.CSSProperties | null;
-  avatar_url: string,
+  avatar_url: string | null;
   linkedin?: string;
   twitter?: string;
   facebook?: string;

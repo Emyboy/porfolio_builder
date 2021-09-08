@@ -10,6 +10,7 @@ interface Props {
   placeholder?: string;
   className?: string;
   defaultValue?: string | number;
+  name?: string;
 }
 
 export const Input = styled.input`
