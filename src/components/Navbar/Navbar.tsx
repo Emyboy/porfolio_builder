@@ -16,7 +16,7 @@ const Wrapper = styled.nav`
     padding: 20px;
     h1 {
         margin-left: 10px;
-        color: ${(p) => p.theme.colors.text_color};
+        color: ${(p) => p.theme.colors?.text_color};
         margin-bottom: 0%;
         /* margin-top: 2px; */
     }
@@ -24,7 +24,7 @@ const Wrapper = styled.nav`
         border-radius: 10px;
     }
     a {
-        color: ${(p) => p.theme.colors.theme_color};
+        color: ${(p) => p.theme.colors?.theme_color};
         font-size: 18px;
         align-self: self-end;
         margin-bottom: 13px;

@@ -5,8 +5,8 @@ import { AiOutlineAppstoreAdd } from "react-icons/ai";
 interface Props {}
 
 const Wrapper = styled.div`
-    background-color: ${p => p.theme.colors.accent_color};
-    color: ${p => p.theme.colors.theme_color};
+    background-color: ${p => p.theme.colors?.accent_color};
+    color: ${p => p.theme.colors?.theme_color};
     text-align: center;
     height: 9em;
     margin-top: 1em;

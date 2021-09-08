@@ -11,7 +11,7 @@ interface Props {
 
 const Wrapper = styled.div`
     label {
-        color: ${p => p.theme.colors.text_color};
+        color: ${p => p.theme.colors?.text_color};
     }
 `;
 

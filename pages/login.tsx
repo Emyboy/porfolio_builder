@@ -10,7 +10,7 @@ interface Props {}
 
 export const AuthWrapper = styled.section`
     height: 100vh;
-    background-color: ${(p) => p.theme.colors.background};
+    background-color: ${(p) => p.theme.colors?.background};
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -19,21 +19,21 @@ export const AuthWrapper = styled.section`
     background-repeat: no-repeat;
     background-position: bottom;
     h2 {
-        color: ${(p) => p.theme.colors.theme_color};
+        color: ${(p) => p.theme.colors?.theme_color};
     }
     #login {
         align-self: center;
     }
     .card {
-        border: 1px solid ${(p) => p.theme.colors.theme_color};
-        background-color: ${(p) => p.theme.colors.accent_color};
+        border: 1px solid ${(p) => p.theme.colors?.theme_color};
+        background-color: ${(p) => p.theme.colors?.accent_color};
         border-radius: 20px;
     }
     label {
-        color: ${(p) => p.theme.colors.theme_color};
+        color: ${(p) => p.theme.colors?.theme_color};
     }
     a {
-        color: ${(p) => p.theme.colors.theme_color};
+        color: ${(p) => p.theme.colors?.theme_color};
         align-self: center;
     }
     img {

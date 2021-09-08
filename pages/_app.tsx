@@ -26,7 +26,7 @@ export const PageLoading = styled.div`
     justify-content: center;
     h3 {
         align-self: center;
-        color: ${(p) => p.theme.colors.theme_color};
+        color: ${(p) => p.theme.colors?.theme_color};
         font-size: 50px;
     }
 `;

@@ -78,7 +78,7 @@ const Wrapper = styled.div`
             rgba(255, 255, 255, 0) 100%
         );
         a {
-            color: ${(p) => p.theme.colors.text_color};
+            color: ${(p) => p.theme.colors?.text_color};
             align-self: center;
             padding-top: 8em;
         }
