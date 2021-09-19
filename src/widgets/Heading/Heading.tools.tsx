@@ -44,7 +44,7 @@ export default function HeadingTools({}: Props): ReactElement {
             <InputField
                 onChange={(e) => updateKeyValues(e.target.value, "heading")}
                 label="Heading Text"
-                defaultValue={widget_list[toolsIndex].heading}
+                defaultValue={widget_list[toolsIndex]?.heading}
             />
 
             <EachToolWrapperTool
@@ -55,7 +55,7 @@ export default function HeadingTools({}: Props): ReactElement {
                 <LayoutButtons
                     onChange={(val) => updateNestedkeyValues('justifyContent',val,'container_style')}
                     selected={
-                        widget_list[toolsIndex].container_style?.justifyContent
+                        widget_list[toolsIndex]?.container_style?.justifyContent
                     }
                 />
             </EachToolWrapperTool>

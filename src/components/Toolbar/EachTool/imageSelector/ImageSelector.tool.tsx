@@ -61,6 +61,7 @@ export default function ImageSelectorTool({
                     {selectedImageFile ? (
                         <div>
                             <img
+                                data-testid='preview-img'
                                 src={selectedImageFile}
                                 alt="preview"
                                 width="30"

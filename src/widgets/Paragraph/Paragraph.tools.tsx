@@ -28,6 +28,11 @@ export default function ParagraphToolSet({}: Props): ReactElement {
         value: string,
         parentKey: string,
     ) => {
+        console.log('UPDATING --', {
+            key,
+            value,
+            parentKey
+        })
         const editedData = {
             ...data,
             [parentKey]: {
