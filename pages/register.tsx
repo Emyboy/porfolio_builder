@@ -18,7 +18,7 @@ export default function login({}: Props): ReactElement {
         password: null
     })
     
-    const handleSubmit = (e: SubmitEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         axios(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/local/register`, {
             method: "POST",
