@@ -1,16 +1,44 @@
-import React, { ReactElement } from "react";
-import styled from "styled-components";
+import React, { ReactElement, useState } from "react";
 import Image from "next/image";
 import InputField from "@components/InputField/InputField.tool";
 import { Button } from "@components/Button/Button.component";
 import Link from "next/link";
 import { AuthWrapper } from "./login";
 import Navbar from "@components/Navbar/Navbar";
+import axios from "axios";
 
 interface Props {}
 
 
 export default function login({}: Props): ReactElement {
+
+    const [data, setData] = useState({
+        username: null,
+        email: null,
+        password: null
+    })
+    
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+        axios(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/local/register`, {
+            method: "POST",
+            data,
+        })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
+    const handleInputChange = (e:any) => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        })
+    }
+
     return (
         <AuthWrapper>
             <Navbar home />
@@ -21,23 +49,23 @@ export default function login({}: Props): ReactElement {
                             <Image src={"/logo.png"} width="40" height="40" />
                             <h2>Register</h2>
                         </div>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <InputField
                                 name="username"
                                 label="Username"
-                                onChange={() => {}}
+                                onChange={handleInputChange}
                                 placeholder="Username"
                             />
                             <InputField
                                 name="email"
                                 label="Email"
-                                onChange={() => {}}
+                                onChange={handleInputChange}
                                 placeholder="Email Address"
                             />
                             <InputField
                                 name="password"
                                 label="Password"
-                                onChange={() => {}}
+                                onChange={handleInputChange}
                                 placeholder="Password"
                                 type="password"
                             />

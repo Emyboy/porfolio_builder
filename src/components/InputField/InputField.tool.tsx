@@ -26,10 +26,12 @@ export default function InputField({
   type,
   placeholder,
   defaultValue,
+  name
 }: Props): ReactElement {
   return (
     <FormGroup label={label} htmlFor={htmlFor}>
       <Input
+        name={name}
         type={type}
         className="form-control"
         id={htmlFor}

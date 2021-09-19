@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1631063295587" clover="3.2.0">
-  <project timestamp="1631063295587" name="All files">
-    <metrics statements="218" coveredstatements="134" conditionals="95" coveredconditionals="53" methods="124" coveredmethods="66" elements="437" coveredelements="253" complexity="0" loc="218" ncloc="218" packages="26" files="38" classes="38"/>
+<coverage generated="1632073594714" clover="3.2.0">
+  <project timestamp="1632073594714" name="All files">
+    <metrics statements="218" coveredstatements="143" conditionals="95" coveredconditionals="59" methods="124" coveredmethods="71" elements="437" coveredelements="273" complexity="0" loc="218" ncloc="218" packages="26" files="38" classes="38"/>
     <package name="portfolio_builder">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Global.ts" path="C:\web\projects\portfolio_builder\Global.ts">
@@ -77,24 +77,24 @@
       <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
       <file name="Button.component.tsx" path="C:\web\projects\portfolio_builder\src\components\Button\Button.component.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="18" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="9" type="stmt"/>
-        <line num="24" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="30" count="9" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="43" count="9" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="19" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="18" type="stmt"/>
+        <line num="25" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="18" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="45" count="18" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.FormGroup">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="FormGroup.tsx" path="C:\web\projects\portfolio_builder\src\components\FormGroup\FormGroup.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="14" count="16" type="stmt"/>
-        <line num="25" count="16" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="14" count="21" type="stmt"/>
+        <line num="25" count="21" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.IconBtn">
@@ -114,20 +114,20 @@
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="InputField.tool.tsx" path="C:\web\projects\portfolio_builder\src\components\InputField\InputField.tool.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="30" count="6" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.LayoutButtons">
-      <metrics statements="5" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="3" conditionals="12" coveredconditionals="4" methods="4" coveredmethods="2"/>
       <file name="LayoutButtons.tsx" path="C:\web\projects\portfolio_builder\src\components\LayoutButtons\LayoutButtons.tsx">
-        <metrics statements="5" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="5" coveredstatements="3" conditionals="12" coveredconditionals="4" methods="4" coveredmethods="2"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="39" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
     </package>
     <package name="portfolio_builder.src.components.Toolbar">
@@ -164,10 +164,10 @@
       <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="2"/>
       <file name="EachToolWrapper.tool.tsx" path="C:\web\projects\portfolio_builder\src\components\Toolbar\EachTool\EachToolWrapper\EachToolWrapper.tool.tsx">
         <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="2"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="21" count="8" type="stmt"/>
-        <line num="35" count="8" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="35" count="9" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
       </file>
     </package>
@@ -179,17 +179,17 @@
       </file>
     </package>
     <package name="portfolio_builder.src.components.Toolbar.EachTool.imageSelector">
-      <metrics statements="9" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="4"/>
+      <metrics statements="9" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="4"/>
       <file name="ImageSelector.tool.tsx" path="C:\web\projects\portfolio_builder\src\components\Toolbar\EachTool\imageSelector\ImageSelector.tool.tsx">
-        <metrics statements="9" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="4"/>
+        <metrics statements="9" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="4"/>
         <line num="11" count="3" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
       </file>
     </package>
@@ -225,59 +225,59 @@
       <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="builder.action.ts" path="C:\web\projects\portfolio_builder\src\redux\actions\builder\builder.action.ts">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
       </file>
       <file name="builder.action.types.ts" path="C:\web\projects\portfolio_builder\src\redux\actions\builder\builder.action.types.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="12" type="stmt"/>
-        <line num="2" count="12" type="stmt"/>
+        <line num="1" count="14" type="stmt"/>
+        <line num="2" count="14" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.redux.reducers">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="root.reducer.ts" path="C:\web\projects\portfolio_builder\src\redux\reducers\root.reducer.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="7" count="12" type="stmt"/>
+        <line num="7" count="14" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.redux.reducers.app">
       <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="app.reducer.ts" path="C:\web\projects\portfolio_builder\src\redux\reducers\app\app.reducer.ts">
         <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="3" count="12" type="stmt"/>
-        <line num="10" count="41" type="cond" truecount="1" falsecount="2"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="10" count="47" type="cond" truecount="1" falsecount="2"/>
         <line num="12" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="19" count="41" type="stmt"/>
+        <line num="19" count="47" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.redux.reducers.builder">
       <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="builder.reducer.ts" path="C:\web\projects\portfolio_builder\src\redux\reducers\builder\builder.reducer.ts">
         <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="10" count="12" type="stmt"/>
-        <line num="21" count="12" type="stmt"/>
-        <line num="36" count="41" type="cond" truecount="2" falsecount="1"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="21" count="14" type="stmt"/>
+        <line num="36" count="47" type="cond" truecount="2" falsecount="1"/>
         <line num="38" count="5" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="45" count="36" type="stmt"/>
+        <line num="45" count="42" type="stmt"/>
       </file>
     </package>
     <package name="portfolio_builder.src.redux.store">
       <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="configure.store.ts" path="C:\web\projects\portfolio_builder\src\redux\store\configure.store.ts">
         <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="15" count="12" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="12" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="14" type="cond" truecount="1" falsecount="0"/>
       </file>
       <file name="store.ts" path="C:\web\projects\portfolio_builder\src\redux\store\store.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="12" type="stmt"/>
-        <line num="10" count="12" type="stmt"/>
-        <line num="12" count="12" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
         <line num="13" count="5" type="stmt"/>
       </file>
     </package>
@@ -285,17 +285,17 @@
       <metrics statements="12" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="loadState.ts" path="C:\web\projects\portfolio_builder\src\redux\utils\loadState.ts">
         <metrics statements="7" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="12" type="stmt"/>
-        <line num="2" count="12" type="stmt"/>
-        <line num="3" count="12" type="stmt"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="1"/>
-        <line num="5" count="12" type="stmt"/>
+        <line num="1" count="14" type="stmt"/>
+        <line num="2" count="14" type="stmt"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="4" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="14" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
       <file name="saveState.ts" path="C:\web\projects\portfolio_builder\src\redux\utils\saveState.ts">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="12" type="stmt"/>
+        <line num="2" count="14" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
         <line num="5" count="5" type="stmt"/>
@@ -309,23 +309,23 @@
       </file>
     </package>
     <package name="portfolio_builder.src.widgets.Heading">
-      <metrics statements="14" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="1"/>
+      <metrics statements="14" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="4"/>
       <file name="Heading.dataset.ts" path="C:\web\projects\portfolio_builder\src\widgets\Heading\Heading.dataset.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="Heading.tools.tsx" path="C:\web\projects\portfolio_builder\src\widgets\Heading\Heading.tools.tsx">
-        <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
+        <metrics statements="13" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
       </file>
@@ -406,10 +406,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.tsx" path="C:\web\projects\portfolio_builder\test\index.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="19" count="12" type="stmt"/>
-        <line num="20" count="30" type="stmt"/>
-        <line num="27" count="12" type="stmt"/>
-        <line num="28" count="28" type="stmt"/>
+        <line num="19" count="14" type="stmt"/>
+        <line num="20" count="36" type="stmt"/>
+        <line num="27" count="14" type="stmt"/>
+        <line num="28" count="33" type="stmt"/>
       </file>
     </package>
   </project>

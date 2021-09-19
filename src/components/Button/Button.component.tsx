@@ -12,6 +12,7 @@ export interface BtnProps {
     children: ReactElement[] | ReactElement;
     outlined?: boolean;
     rounded?: boolean;
+    test_id?: string;
 }
 export const StyledBtn = styled.button<StyledProps>`
     background-color: ${(p) =>
@@ -39,9 +40,11 @@ export const Button: React.FC<BtnProps> = ({
     onClick,
     outlined,
     rounded,
+    test_id
 }) => {
     return (
         <StyledBtn
+            data-testid={test_id}
             rounded={rounded}
             outlined={outlined}
             onClick={onClick}
