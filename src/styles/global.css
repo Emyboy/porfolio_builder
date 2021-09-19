@@ -34,3 +34,6 @@
 a {
   text-decoration: none !important;
 }
+.link {
+  cursor: pointer !important;
+}

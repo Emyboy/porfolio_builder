@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { JumbotronWidget } from "@widgets/jumbotron/Jumbotron.widget";
 import HeadingWidget from "@widgets/Heading/Heading.widget";
 import Paragraph from "@widgets/Paragraph/Paragraph.widget";
+import { WidgetTypes } from "types/widget.type";
 
 interface Props {
     type: string;
-    widget_data: any;
+    widget_data: WidgetTypes;
     onClick: () => void;
 }
 

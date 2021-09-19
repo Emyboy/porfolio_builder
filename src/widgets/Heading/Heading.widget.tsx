@@ -12,7 +12,7 @@ export default function HeadingWidget({ widget_data }: Props): ReactElement {
         <WidgetWrapper
             index={widget_data.index}
         >
-            <div style={{ ...widget_data.container_style }}>
+            <div style={{ ...widget_data.container_style }} className='mb-2'>
                 <div className="m-2">
                     <h3 style={{ ...widget_data.heading_style }}>
                         {widget_data.heading}
