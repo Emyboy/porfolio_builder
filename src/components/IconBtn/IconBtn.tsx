@@ -43,7 +43,7 @@ const Btn = styled.button<StyledProps>`
     }
 `;
 
-export default function IconBtn({ children, outlined, toolTip, onClick, disabled, className }: Props): ReactElement {
+export function IconBtn({ children, outlined, toolTip, onClick, disabled, className }: Props): ReactElement {
     return (
         <Tooltip placement="bottomLeft" title={toolTip}>
             <Btn outlined={outlined} className={`btn-sm ${className ? className: ""}`} onClick={onClick} disabled={disabled}>
@@ -52,3 +52,4 @@ export default function IconBtn({ children, outlined, toolTip, onClick, disabled
         </Tooltip>
     );
 }
+export default IconBtn

@@ -13,6 +13,7 @@ export interface BtnProps {
     outlined?: boolean;
     rounded?: boolean;
     test_id?: string;
+    loading?: boolean;
 }
 export const StyledBtn = styled.button<StyledProps>`
     background-color: ${(p) =>
@@ -40,7 +41,8 @@ export const Button: React.FC<BtnProps> = ({
     onClick,
     outlined,
     rounded,
-    test_id
+    test_id,
+    loading
 }) => {
     return (
         <StyledBtn
@@ -48,10 +50,10 @@ export const Button: React.FC<BtnProps> = ({
             rounded={rounded}
             outlined={outlined}
             onClick={onClick}
-            disabled={disabled}
+            disabled={disabled || loading}
             className={`${className && className} shadow-sm`}
         >
-            {children}
+            {loading ? <small>Loading...</small> : children}
         </StyledBtn>
     );
 };

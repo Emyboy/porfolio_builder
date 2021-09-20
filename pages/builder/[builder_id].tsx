@@ -18,11 +18,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/widgets");
     const widgets: WidgetTypes[] = await res.json();
 
-    console.log("DATA ---", res);
+    // console.log("DATA ---", res);
 
     return {
         props: {
-            widgets,
+            widgets: widgets || [],
         },
     };
 };
