@@ -1,12 +1,14 @@
-import React, { ReactElement, useState } from "react";
-import { SET_BUILDER_STATE } from "@redux/actions/builder/builder.action.types";
+import React, { ReactElement, useEffect, useState } from "react";
+import {
+    ADD_WIDGET,
+    SET_BUILDER_STATE,
+} from "@redux/actions/builder/builder.action.types";
 import store, { StoreState } from "@redux/store/store";
 import {
     DragDropContext,
     Droppable,
     Draggable,
     NotDraggingStyle,
-    DragStart,
 } from "react-beautiful-dnd";
 import { DropResult, DraggingStyle } from "react-beautiful-dnd";
 import { WidgetSideNav } from "./Builder.styled";
@@ -14,25 +16,14 @@ import WidgetRender from "./WidgetRender";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@components/Button/Button.component";
 import Toolbar from "@components/Toolbar/Toolbar";
+import { AiFillCloseCircle } from "react-icons/ai";
+import IconBtn from "@components/IconBtn/IconBtn";
+import { WidgetTypes } from "types/widget.type";
+import { EachWeidgetPreview } from "@components/EachWeidgetPreview/EachWeidgetPreview.component";
 
-interface Props {}
-
-const EachPreview = () => {
-    return (
-        <div
-            className="card text-white m-1"
-            style={{
-                height: "160px",
-                width: "240px",
-                backgroundImage: "url(https://picsum.photos/300/300)",
-            }}
-        >
-            <div className="card-img-overlay">
-                <p className="card-text text-shadow">Last updated 3 mins ago</p>
-            </div>
-        </div>
-    );
-};
+interface Props {
+    widgets: WidgetTypes[];
+}
 
 const reorder = (list: any[], startIndex: number, endIndex: number) => {
     const result = Array.from(list);
@@ -41,6 +32,16 @@ const reorder = (list: any[], startIndex: number, endIndex: number) => {
     console.log({
         list,
         result,
+    });
+    const newResult = result.map((val, i) => {
+                return {...val, id: `${i}`}
+            })
+    store.dispatch({
+        type: SET_BUILDER_STATE,
+        payload: {
+            ...store.getState().builder,
+            widget_list: newResult
+        },
     });
     return result;
 };
@@ -59,7 +60,7 @@ const getItemStyle = (
     ...draggableStyle,
 });
 
-export default function BuilderPreview({}: Props): ReactElement {
+export default function BuilderPreview({ widgets }: Props): ReactElement {
     const [showNav, setShowNav] = useState<boolean>(false);
     const dispatch = useDispatch();
     const builder = useSelector((state: StoreState) => state.builder);
@@ -76,15 +77,16 @@ export default function BuilderPreview({}: Props): ReactElement {
             result.destination.index,
         );
 
-        store.dispatch({
-            type: SET_BUILDER_STATE,
-            payload: {
-                ...builder,
-                widget_list: items,
-            },
-        });
-      
+        // store.dispatch({
+        //     type: SET_BUILDER_STATE,
+        //     payload: {
+        //         ...builder,
+        //         widget_list: items,
+        //     },
+        // });
+        
     };
+
 
     return (
         <div
@@ -100,7 +102,7 @@ export default function BuilderPreview({}: Props): ReactElement {
                         overflowX: "hidden",
                     }}
                 >
-                    <DragDropContext onDragEnd={onDragEnd} >
+                    <DragDropContext onDragEnd={onDragEnd}>
                         <Droppable droppableId="droppable">
                             {(provided, snapshot) => (
                                 <div
@@ -111,8 +113,8 @@ export default function BuilderPreview({}: Props): ReactElement {
                                     {builder.widget_list.map((item, index) => {
                                         return (
                                             <Draggable
-                                                key={item.id}
-                                                draggableId={item.id}
+                                                key={`${item.id}`}
+                                                draggableId={`${item.id}`}
                                                 index={index}
                                             >
                                                 {(provided, snapshot) => (
@@ -120,6 +122,7 @@ export default function BuilderPreview({}: Props): ReactElement {
                                                         ref={provided.innerRef}
                                                         {...provided.draggableProps}
                                                         {...provided.dragHandleProps}
+                                                        id="preview-window"
                                                         // style={getItemStyle(
                                                         //     snapshot.isDragging,
                                                         //     provided
@@ -134,7 +137,8 @@ export default function BuilderPreview({}: Props): ReactElement {
                                                                     payload: {
                                                                         toolsIndex:
                                                                             index,
-                                                                            showToolbar: true
+                                                                        showToolbar:
+                                                                            true,
                                                                     },
                                                                 });
                                                             }}
@@ -172,41 +176,45 @@ export default function BuilderPreview({}: Props): ReactElement {
             {/* <div className="h-100 col-3 h-50">
          <div className="m-1 h-100"></div>
        </div> */}
-            <WidgetSideNav show={showNav}>
-                <div style={{ height: "70px" }}>
+            <WidgetSideNav show={showNav} data-testid='widget-nav'>
+                <div
+                    style={{
+                        height: "70px",
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    <IconBtn
+                        onClick={() => setShowNav(false)}
+                        className="mb-2"
+                        toolTip="Close"
+                    >
+                        <AiFillCloseCircle />
+                    </IconBtn>
                     <h3 className="text-white p-3">Select Widgets</h3>
                 </div>
                 <div className="h-100" style={{ overflowY: "scroll" }}>
                     <div className="container">
                         <div
-                            className="row pt2 pr-2 justify-content-center"
+                            className="row pt2 pr-2 "
                             style={{ paddingBottom: "15vh" }}
                         >
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
-                            <EachPreview />
+                            {widgets.map((val, i) => {
+                                return (
+                                    <EachWeidgetPreview
+                                        key={i}
+                                        data={val}
+                                        onClick={() => {
+                                            console.log('ADDED --', val.dataset)
+                                            dispatch({
+                                                type: ADD_WIDGET,
+                                                payload: val.dataset,
+                                            });
+                                            setShowNav(false);
+                                        }}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

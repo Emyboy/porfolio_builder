@@ -6,8 +6,13 @@ import Head from "next/head";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 import IconBtn from "@components/IconBtn/IconBtn";
 import { useRouter } from "next/router";
+import { WidgetTypes } from "types/widget.type";
 
-export const BuilderComponent: React.FC = () => {
+interface Props {
+    widgets: WidgetTypes;
+}
+
+export const BuilderComponent = ({ widgets }: Props) => {
     const router = useRouter();
     return (
         <S_Builder>
@@ -38,7 +43,7 @@ export const BuilderComponent: React.FC = () => {
                 </nav>
             </div>
             <div className="container-fluid pt-4" style={{ height: "98vh" }}>
-                <BuilderPreview />
+                <BuilderPreview widgets={widgets} />
             </div>
         </S_Builder>
     );

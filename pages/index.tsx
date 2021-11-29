@@ -95,7 +95,7 @@ export default function index({}: Props): ReactElement {
                     muted
                     loop
                     id="myVideo"
-                    className="jumbotron jumbotron-fluid hero"
+                    className="jumbotron jumbotron-fluid hero mt-5"
                 >
                     <source src="/hero.mp4" type="video/mp4" />
                 </video>
@@ -105,7 +105,7 @@ export default function index({}: Props): ReactElement {
                         Build your resume, portfolio and website.
                     </p>
                     <div className="d-flex">
-                        <Link href="/login">
+                        <Link href="/register">
                             <Button onClick={() => {}}>
                                 <span>Get Started</span>
                             </Button>

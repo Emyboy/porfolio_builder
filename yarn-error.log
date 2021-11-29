@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js test
+  C:\Program Files\nodejs\node.exe C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/js-cookies -D
 
 PATH: 
-  C:\Users\chukwuemeka\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\chukwuemeka\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\chukwuemeka\AppData\Local\Microsoft\WindowsApps;C:\Users\chukwuemeka\AppData\Roaming\npm;C:\src\flutter\bin;C:\Users\chukwuemeka\AppData\Local\Android\Sdk\emulator;C:\Program Files\heroku\bin;C:\platform-tools\abd.exe;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\chukwuemeka\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\chukwuemeka\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\chukwuemeka\AppData\Local\Microsoft\WindowsApps;C:\Users\chukwuemeka\AppData\Roaming\npm;C:\src\flutter\bin;C:\Users\chukwuemeka\AppData\Local\Android\Sdk\emulator;C:\Program Files\heroku\bin;C:\platform-tools\abd.exe;C:\Users\chukwuemeka\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chukwuemeka\AppData\Local\Programs\Microsoft VS Code Insiders\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.10
@@ -14,12 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: C:\web\projects\portfolio_builder\package.json: Unexpected token } in JSON at position 593
-      at JSON.parse (<anonymous>)
-      at C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
-      at C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+  Error: https://registry.yarnpkg.com/@types%2fjs-cookies: Not found
+      at Request.params.callback [as _callback] (C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:375:28)
+      at Request.<anonymous> (C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:375:28)
+      at IncomingMessage.<anonymous> (C:\Users\chukwuemeka\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:481:28)
+      at IncomingMessage.emit (events.js:387:35)
+      at endReadableNT (internal/streams/readable.js:1317:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
 
 npm manifest: 
   {
@@ -36,24 +41,30 @@ npm manifest:
           "test": "jest -c test/jest.config.js --coverage",
           "cypress:open": "cypress open",
           "cypress:run": "cypress run --config video=false",
-          "cypress:test": "start-server-and-test start http://localhost:yarn cypress:run",
+          "cypress:test": "start-server-and-test start http://localhost:yarn cypress:run"
       },
       "dependencies": {
           "@ant-design/icons": "^4.4.0",
           "@reduxjs/toolkit": "^1.6.0",
+          "@types/nprogress": "^0.2.0",
           "antd": "^4.10.2",
           "axios": "^0.21.1",
+          "js-cookies": "^1.0.4",
           "next": "10.2.0",
           "next-compose-plugins": "^2.2.1",
+          "nprogress": "^0.2.0",
           "prettier": "^2.2.1",
           "react": "17.0.2",
+          "react-activity": "^2.1.1",
+          "react-beautiful-dnd": "^13.1.0",
           "react-dom": "17.0.2",
           "react-icons": "^4.2.0",
           "react-redux": "^7.2.4",
           "redux-devtools-extension": "^2.13.9",
           "redux-logger": "^3.0.6",
           "styled-components": "^5.2.1",
-          "styled-system": "^5.1.5"
+          "styled-system": "^5.1.5",
+          "uuidv4": "^6.2.12"
       },
       "devDependencies": {
           "@babel/core": "^7.12.10",
@@ -68,8 +79,10 @@ npm manifest:
           "@types/jest": "^27.0.1",
           "@types/node": "^14.14.13",
           "@types/react": "^17.0.0",
+          "@types/react-beautiful-dnd": "^13.1.2",
           "@types/react-dom": "^17.0.0",
           "@types/react-redux": "^7.1.16",
+          "@types/redux-logger": "^3.0.9",
           "@types/styled-components": "^5.1.13",
           "@types/styled-system": "^5.1.13",
           "babel-loader": "^8.2.2",
@@ -2933,6 +2946,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/npmlog/-/npmlog-4.1.3.tgz#9c24b49a97e25cf15a890ff404764080d7942132"
     integrity sha512-1TcL7YDYCtnHmLhTWbum+IIwLlvpaHoEKS2KNIngEwLzwgDeHaebaEHHbQp8IqzNQ9IYiboLKUjAf7MZqG63+w==
   
+  "@types/nprogress@^0.2.0":
+    version "0.2.0"
+    resolved "https://registry.yarnpkg.com/@types/nprogress/-/nprogress-0.2.0.tgz#86c593682d4199212a0509cc3c4d562bbbd6e45f"
+    integrity sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==
+  
   "@types/overlayscrollbars@^1.12.0":
     version "1.12.1"
     resolved "https://registry.yarnpkg.com/@types/overlayscrollbars/-/overlayscrollbars-1.12.1.tgz#fb637071b545834fb12aea94ee309a2ff4cdc0a8"
@@ -2975,6 +2993,13 @@ Lockfile:
     dependencies:
       "@types/react" "*"
   
+  "@types/react-beautiful-dnd@^13.1.2":
+    version "13.1.2"
+    resolved "https://registry.yarnpkg.com/@types/react-beautiful-dnd/-/react-beautiful-dnd-13.1.2.tgz#510405abb09f493afdfd898bf83995dc6385c130"
+    integrity sha512-+OvPkB8CdE/bGdXKyIhc/Lm2U7UAYCCJgsqmopFmh9gbAudmslkI8eOrPDjg4JhwSE6wytz4a3/wRjKtovHVJg==
+    dependencies:
+      "@types/react" "*"
+  
   "@types/react-dom@>=16.9.0", "@types/react-dom@^17.0.0":
     version "17.0.9"
     resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
@@ -3014,6 +3039,13 @@ Lockfile:
       "@types/prop-types" "*"
       "@types/scheduler" "*"
       csstype "^3.0.2"
+  
+  "@types/redux-logger@^3.0.9":
+    version "3.0.9"
+    resolved "https://registry.yarnpkg.com/@types/redux-logger/-/redux-logger-3.0.9.tgz#9193b3d51bb6ab98d25514ba7764e4f98a64d3ec"
+    integrity sha512-cwYhVbYNgH01aepeMwhd0ABX6fhVB2rcQ9m80u8Fl50ZODhsZ8RhQArnLTkE7/Zrfq4Sz/taNoF7DQy9pCZSKg==
+    dependencies:
+      redux "^4.0.0"
   
   "@types/scheduler@*":
     version "0.16.2"
@@ -3072,6 +3104,11 @@ Lockfile:
     version "2.0.6"
     resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
     integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+  
+  "@types/uuid@8.3.1":
+    version "8.3.1"
+    resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.1.tgz#1a32969cf8f0364b3d8c8af9cc3555b7805df14f"
+    integrity sha512-Y2mHTRAbqfFkpjldbkHGY8JIzRN6XqYRliG8/24FcHm2D2PwW24fl5xMRTVGdrb7iMrwCaIEbLWerGIkXuFWVg==
   
   "@types/webpack-env@^1.16.0":
     version "1.16.2"
@@ -5110,6 +5147,13 @@ Lockfile:
       public-encrypt "^4.0.0"
       randombytes "^2.0.0"
       randomfill "^1.0.3"
+  
+  css-box-model@^1.2.0:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/css-box-model/-/css-box-model-1.2.1.tgz#59951d3b81fd6b2074a62d49444415b0d2b4d7c1"
+    integrity sha512-a7Vr4Q/kd/aw96bnJG332W9V9LkJO69JRcaCYDUqjp6/z0w6VcZjgAcTbgFxEPfBgdnAwlh3iwu+hLopa+flJw==
+    dependencies:
+      tiny-invariant "^1.0.6"
   
   css-color-keywords@^1.0.0:
     version "1.0.0"
@@ -8282,6 +8326,11 @@ Lockfile:
       "@sideway/formula" "^3.0.0"
       "@sideway/pinpoint" "^2.0.0"
   
+  js-cookies@^1.0.4:
+    version "1.0.4"
+    resolved "https://registry.yarnpkg.com/js-cookies/-/js-cookies-1.0.4.tgz#d46e576c420ff6d5542c0f52b6d4ef7d637e754e"
+    integrity sha1-1G5XbEIP9tVULA9SttTvfWN+dU4=
+  
   js-string-escape@^1.0.1:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/js-string-escape/-/js-string-escape-1.0.1.tgz#e2625badbc0d67c7533e9edc1068c587ae4137ef"
@@ -8819,7 +8868,7 @@ Lockfile:
     dependencies:
       fs-monkey "1.0.3"
   
-  memoize-one@^5.0.0:
+  memoize-one@^5.0.0, memoize-one@^5.1.1:
     version "5.2.1"
     resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
     integrity sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==
@@ -9360,6 +9409,11 @@ Lockfile:
       console-control-strings "~1.1.0"
       gauge "~2.7.3"
       set-blocking "~2.0.0"
+  
+  nprogress@^0.2.0:
+    version "0.2.0"
+    resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+    integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
   
   nth-check@^2.0.0:
     version "2.0.0"
@@ -10239,6 +10293,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
     integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
   
+  raf-schd@^4.0.2:
+    version "4.0.3"
+    resolved "https://registry.yarnpkg.com/raf-schd/-/raf-schd-4.0.3.tgz#5d6c34ef46f8b2a0e880a8fcdb743efc5bfdbc1a"
+    integrity sha512-tQkJl2GRWh83ui2DiPTJz9wEiMN20syf+5oKfB03yYP7ioZcJwsIK8FjrtLwH1m7C7e+Tt2yYBlrOpdT+dyeIQ==
+  
   ramda@^0.21.0:
     version "0.21.0"
     resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.21.0.tgz#a001abedb3ff61077d4ff1d577d44de77e8d0a35"
@@ -10641,6 +10700,24 @@ Lockfile:
       rc-resize-observer "^1.0.0"
       rc-util "^5.0.7"
   
+  react-activity@^2.1.1:
+    version "2.1.1"
+    resolved "https://registry.yarnpkg.com/react-activity/-/react-activity-2.1.1.tgz#39cfdf5138edec3a9e86780771a3c83571ff68d4"
+    integrity sha512-QzArf8ED9Q2s8z30IB5VOMqbBsjZrc/Tj6Yc0TxN4UrjZ8hIr8wfAcTS+0IoAR0BiqaQ36wdhnrSFDLg+nxfuQ==
+  
+  react-beautiful-dnd@^13.1.0:
+    version "13.1.0"
+    resolved "https://registry.yarnpkg.com/react-beautiful-dnd/-/react-beautiful-dnd-13.1.0.tgz#ec97c81093593526454b0de69852ae433783844d"
+    integrity sha512-aGvblPZTJowOWUNiwd6tNfEpgkX5OxmpqxHKNW/4VmvZTNTbeiq7bA3bn5T+QSF2uibXB0D1DmJsb1aC/+3cUA==
+    dependencies:
+      "@babel/runtime" "^7.9.2"
+      css-box-model "^1.2.0"
+      memoize-one "^5.1.1"
+      raf-schd "^4.0.2"
+      react-redux "^7.2.0"
+      redux "^4.0.4"
+      use-memo-one "^1.1.1"
+  
   react-colorful@^5.1.2:
     version "5.3.0"
     resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.3.0.tgz#bcbae49c1affa9ab9a3c8063398c5948419296bd"
@@ -10802,6 +10879,18 @@ Lockfile:
     dependencies:
       react-fast-compare "^3.0.1"
       warning "^4.0.2"
+  
+  react-redux@^7.2.0:
+    version "7.2.5"
+    resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-7.2.5.tgz#213c1b05aa1187d9c940ddfc0b29450957f6a3b8"
+    integrity sha512-Dt29bNyBsbQaysp6s/dN0gUodcq+dVKKER8Qv82UrpeygwYeX1raTtil7O/fftw/rFqzaf6gJhDZRkkZnn6bjg==
+    dependencies:
+      "@babel/runtime" "^7.12.1"
+      "@types/react-redux" "^7.1.16"
+      hoist-non-react-statics "^3.3.2"
+      loose-envify "^1.4.0"
+      prop-types "^15.7.2"
+      react-is "^16.13.1"
   
   react-redux@^7.2.4:
     version "7.2.4"
@@ -10982,7 +11071,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
     integrity sha512-km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==
   
-  redux@^4.0.0, redux@^4.1.0:
+  redux@^4.0.0, redux@^4.0.4, redux@^4.1.0:
     version "4.1.1"
     resolved "https://registry.yarnpkg.com/redux/-/redux-4.1.1.tgz#76f1c439bb42043f985fbd9bf21990e60bd67f47"
     integrity sha512-hZQZdDEM25UY2P493kPYuKqviVwZ58lEmGQNeQ+gXa+U0gYPUBf7NKYazbe3m+bs/DzM/ahN12DbF+NG8i0CWw==
@@ -12345,6 +12434,11 @@ Lockfile:
     dependencies:
       setimmediate "^1.0.4"
   
+  tiny-invariant@^1.0.6:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"
+    integrity sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw==
+  
   tmp@~0.2.1:
     version "0.2.1"
     resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.2.1.tgz#8457fc3037dcf4719c251367a1af6500ee1ccf14"
@@ -12811,6 +12905,11 @@ Lockfile:
     dependencies:
       use-isomorphic-layout-effect "^1.0.0"
   
+  use-memo-one@^1.1.1:
+    version "1.1.2"
+    resolved "https://registry.yarnpkg.com/use-memo-one/-/use-memo-one-1.1.2.tgz#0c8203a329f76e040047a35a1197defe342fab20"
+    integrity sha512-u2qFKtxLsia/r8qG0ZKkbytbztzRb317XCkT7yP8wxL0tZ/CzK2G+WWie5vWvpyeP7+YoPIwbJoIHJ4Ba4k0oQ==
+  
   use-subscription@1.5.1:
     version "1.5.1"
     resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.5.1.tgz#73501107f02fad84c6dd57965beb0b75c68c42d1"
@@ -12889,15 +12988,23 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/uuid-browser/-/uuid-browser-3.1.0.tgz#0f05a40aef74f9e5951e20efbf44b11871e56410"
     integrity sha1-DwWkCu90+eWVHiDvv0SxGHHlZBA=
   
+  uuid@8.3.2, uuid@^8.3.0, uuid@^8.3.2:
+    version "8.3.2"
+    resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+    integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+  
   uuid@^3.3.2:
     version "3.4.0"
     resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
     integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
   
-  uuid@^8.3.0, uuid@^8.3.2:
-    version "8.3.2"
-    resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
-    integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+  uuidv4@^6.2.12:
+    version "6.2.12"
+    resolved "https://registry.yarnpkg.com/uuidv4/-/uuidv4-6.2.12.tgz#e8c1d1d733c3fa4963d4610b8a3a09b4ec58ca96"
+    integrity sha512-UnN4ThIYWhv3ZUE8UwDnnCvh4JafCNu+sQkxmLyjCVwK3rjLfkg3DYiEv6oCMDIAIVEDP4INg4kX/C5hKaRzZA==
+    dependencies:
+      "@types/uuid" "8.3.1"
+      uuid "8.3.2"
   
   v8-to-istanbul@^7.0.0:
     version "7.1.2"

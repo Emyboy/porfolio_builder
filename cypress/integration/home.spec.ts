@@ -1,19 +1,32 @@
 describe("Homepage", () => {
     beforeEach(() => {
+        cy.viewport("macbook-15");
         cy.visit("/");
     });
-    // it("Brings header", () => {
-    //     cy.getBySel("main-heading").should("contain.text", "superplate");
-    // });
 
-    // it("Should have true href", () => {
-    //     // https://github.com/cypress-io/cypress-example-recipes/blob/master/examples/testing-dom__tab-handling-links/cypress/integration/tab_handling_anchor_links_spec.js
-    //     cy.getBySel("docs-btn-anchor")
-    //         .should("have.prop", "href")
-    //         .and("equal", "https://pankod.github.io/superplate/");
-    // });
-
-    // it("Should have icons", () => {
-    //     cy.getBySel("icon").should("have.length", 6);
-    // });
+    it("should render home page", () => {
+        cy.contains("Get Started").should("exist");
+        cy.contains("Welcome To Builder").should("exist");
+        cy.contains("Build your resume, portfolio and website.").should(
+            "exist",
+        );
+        cy.contains("Try Demo").should("exist");
+        cy.contains("Login").should("exist");
+        cy.contains("About The Developer").should("exist");
+    });
+    
+    it("should navigate properly", () => {
+        cy.contains("Get Started").should("exist").click();
+        cy.wait(3000);
+        cy.url().should('contain', 'register');
+        cy.go('back');
+        cy.contains("Login").click();
+        cy.wait(3000);
+        cy.url().should('contain', 'login');
+        cy.go('back');
+        cy.contains("Try Demo").click()
+        cy.wait(3000);
+        cy.url().should('contain', 'builder');
+        cy.go('back');
+    });
 });
