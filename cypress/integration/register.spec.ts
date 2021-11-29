@@ -16,12 +16,21 @@ describe("Register Page", () => {
         cy.url().should('contain', 'register')
     });
 
-    it('should register a new user', () => {
+    it.only('should register a new user', () => {
         cy.get('input').eq(0).type('tester');
         cy.get('input').eq(1).type('tester@mail.com');
         cy.get('input').eq(2).type('tester');
         cy.get('button').contains('Register').click();
-        cy.get('button').contains('Loading..').should('exist')
+        cy.get('button').contains('Loading..').should('exist');
+        cy.wait(3000);
+        cy.url().should('contain', 'document');
+        cy.contains('Create New Document');
+        cy.contains('tester').should('exist')
+        cy.contains('tester').click();
+        cy.contains('My Documents').should('exist')
+        cy.contains('Logout').should('exist')
+        cy.contains('About Us').should('exist')
+        
     });
 
 });

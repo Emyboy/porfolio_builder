@@ -11,16 +11,16 @@ const Wrapper = styled.div`
     img {
         border-radius: 10px;
     }
-    border: 1px solid ${(p) => p.theme.colors.accent_color};
+    border: 1px solid ${(p) => p.theme.colors?.accent_color};
     border-radius: 10px;
     :hover {
-        border: 1px solid ${(p) => p.theme.colors.theme_color};
+        border: 1px solid ${(p) => p.theme.colors?.theme_color};
     }
 `;
 
 export const EachWeidgetPreview = ({ data, onClick }: EachPreviewProps) => {
     return (
-        <Wrapper className="pt-3 pb-2 text-center col-md-5 col-sm-4 link row justify-content-center m-2" onClick={onClick}>
+        <Wrapper className="pt-3 pb-2 text-center col-md-5 col-sm-4 link row justify-content-center m-2" onDoubleClick={onClick} data-testid='each-widget-preview'>
             {/* <div
                 className="card text-white m-1"
                 style={{

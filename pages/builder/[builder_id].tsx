@@ -8,7 +8,6 @@ interface Props {
 }
 
 export default function BuilderPage({widgets}: Props): ReactElement {
-    console.log('ALL --', widgets)
     return <>
         <BuilderComponent widgets={widgets} />
     </>

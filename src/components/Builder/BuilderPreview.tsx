@@ -20,7 +20,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import IconBtn from "@components/IconBtn/IconBtn";
 import { WidgetTypes } from "types/widget.type";
 import { EachWeidgetPreview } from "@components/EachWeidgetPreview/EachWeidgetPreview.component";
-import { addWidget } from "@redux/actions/builder/builder.action";
 
 interface Props {
     widgets: WidgetTypes[];
@@ -37,7 +36,6 @@ const reorder = (list: any[], startIndex: number, endIndex: number) => {
     const newResult = result.map((val, i) => {
                 return {...val, id: `${i}`}
             })
-    console.log("SETTING ---", newResult);
     store.dispatch({
         type: SET_BUILDER_STATE,
         payload: {
@@ -68,7 +66,6 @@ export default function BuilderPreview({ widgets }: Props): ReactElement {
     const builder = useSelector((state: StoreState) => state.builder);
     const app = useSelector((state: StoreState) => state.app);
     const onDragEnd = (result: DropResult) => {
-        console.log("ON DRAG END");
         // dropped outside the list
         if (!result.destination) {
             return;
@@ -90,9 +87,6 @@ export default function BuilderPreview({ widgets }: Props): ReactElement {
         
     };
 
-    useEffect(() => {
-        console.log("BUILDER CHANGED");
-    }, [builder]);
 
     return (
         <div
@@ -128,6 +122,7 @@ export default function BuilderPreview({ widgets }: Props): ReactElement {
                                                         ref={provided.innerRef}
                                                         {...provided.draggableProps}
                                                         {...provided.dragHandleProps}
+                                                        id="preview-window"
                                                         // style={getItemStyle(
                                                         //     snapshot.isDragging,
                                                         //     provided
@@ -181,7 +176,7 @@ export default function BuilderPreview({ widgets }: Props): ReactElement {
             {/* <div className="h-100 col-3 h-50">
          <div className="m-1 h-100"></div>
        </div> */}
-            <WidgetSideNav show={showNav}>
+            <WidgetSideNav show={showNav} data-testid='widget-nav'>
                 <div
                     style={{
                         height: "70px",
@@ -210,6 +205,7 @@ export default function BuilderPreview({ widgets }: Props): ReactElement {
                                         key={i}
                                         data={val}
                                         onClick={() => {
+                                            console.log('ADDED --', val.dataset)
                                             dispatch({
                                                 type: ADD_WIDGET,
                                                 payload: val.dataset,
